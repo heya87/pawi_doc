@@ -1,0 +1,156 @@
+% Chapter Template
+
+\chapter{Software requirement specification} % Main chapter title
+
+\label{ChapterX} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{ \emph{Software requirement specification}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+
+
+\subsection{Purpose}
+
+The software requirement specification should provide all needed information to develop the context extraction framework and define all delivery objects. All interfaces to external components, input and output data, deployment considerations and quality attribute should be well defined within this document.
+
+
+\subsection{Scope}
+
+
+The context extraction framework will perform automated text extraction on a set of HTML test data with two to three different text extraction algorithms. The performance of each algorithm is measured and an output file with the measured results is generated.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{General description}
+
+\subsection{Operating Environment}
+
+see travis ci 
+
+
+\subsection{Design and Implementation Constraints}
+
+
+
+
+
+\section{System Features}
+
+In this chapter, each system feature is specified. 
+
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Read configuration 				\\ \hline
+	\textbf{Feature id} 		& f1 				\\ \hline
+	\textbf{Description} 		& The text extraction framework is configurable with an external text file. The configuration file will contain following items:
+								 \begin{itemize}
+							        \item Path to folder with html files
+							        \item Path to folder with text files
+							        \item Path to folder with output files
+							        \item Configuration for algorithms
+							        \item etc.
+						        \end{itemize}
+
+						        The configuration file location is defined as a relative path to the source directory. The configuration file is structured in a key value list:
+						        \lstinputlisting{Code/config_template.txt} \\ \hline
+	\textbf{Relevance} 			& needed 			\\ \hline
+	\textbf{Related stories} 	& tbd		\\ \hline
+	\end{tabular} \\
+
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Create test \\ \hline
+	\textbf{Feature id} 		& f2 \\ \hline
+	\textbf{Description} 		& A test contains two input files which are a html file and a text file. They are located in the defined directories by the configuration. As soon as the test framework finds a html and a text file with the same name, a new test is created and the files are read.\\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Run test \\ \hline
+	\textbf{Feature id} 		& f3 \\ \hline
+	\textbf{Description} 		& A test is run as defined in the configuration file. The configuration file defines which algorithms are tested. The output of a test is a text file which contains the results. 								A result file is formatted as follows: * \\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+*)
+\lstinputlisting{Code/output_template.txt} 
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Integrate Justext algorithm \\ \hline
+	\textbf{Feature id} 		& f4 \\ \hline
+	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the justext algorithm is activated and a test is run, the HTML file is extracted with justext and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Integrate Boilerpipe algorithm \\ \hline
+	\textbf{Feature id} 		& f5 \\ \hline
+	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the Boilerpipe algorithm is activated and a test is run, the HTML file is extracted with Boilerpipe and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Integrate RSS feed algorithm \\ \hline
+	\textbf{Feature id} 		& f6 \\ \hline
+	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the RSS feed algorithm is activated and a test is run, the HTML file is extracted with the RSS feed algorithm and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Relevance} 			& nice to have\\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Analize data \\ \hline
+	\textbf{Feature id} 		& f7 \\ \hline
+	\textbf{Description} 		& The output file is read and the data is analyzed in a statistical way.\\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+\section{Data Requirements}
+\section{External Interface Requirements}
+
+\subsection{Boilerpipe}
+
+The boilerpipe algorithm is already implemented in Java so it is easy to integrate. The API can be found under following link. 
+\url{https://code.google.com/p/boilerpipe/}
+
+Other useful links:
+
+Getting started:
+\url{http://code.google.com/p/boilerpipe/wiki/QuickStart}
+
+javadoc extractor:
+\url{http://boilerpipe.googlecode.com/svn/trunk/boilerpipe-core/javadoc/1.0/de/l3s/boilerpipe/extractors/ExtractorBase.html}
+
+
+\subsection{justext}
+
+The justext algorithem is implemented in python and it is not yet defined how it will be integrated into the text extraction framework. See risk analysis.
+The documentation can be found under following link: 
+
+\url{https://code.google.com/p/justext/}
+
+jython:
+http://www.jython.org/
+
+
+
+\section{Quality Attributes}
