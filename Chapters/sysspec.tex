@@ -79,19 +79,16 @@ In this chapter, each system feature is specified.
 	\hline
 	\textbf{Name} 				& Run test \\ \hline
 	\textbf{Feature id} 		& f3 \\ \hline
-	\textbf{Description} 		& A test is run as defined in the configuration file. The configuration file defines which algorithms are tested. The output of a test is a text file which contains the results. 								A result file is formatted as follows: * \\ \hline
+	\textbf{Description} 		& A test is run as defined in the configuration file. The configuration file defines which algorithms are tested. The output of a test is a text file which contains the results. \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
-
-*)
-\lstinputlisting{Code/output_template.txt} 
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Integrate Justext algorithm \\ \hline
 	\textbf{Feature id} 		& f4 \\ \hline
-	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the justext algorithm is activated and a test is run, the HTML file is extracted with justext and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Description} 		& If the justext algorithm is activated in the configuration file and a test is run, the HTML file is extracted with justext. \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
@@ -101,7 +98,7 @@ In this chapter, each system feature is specified.
 	\hline
 	\textbf{Name} 				& Integrate Boilerpipe algorithm \\ \hline
 	\textbf{Feature id} 		& f5 \\ \hline
-	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the Boilerpipe algorithm is activated and a test is run, the HTML file is extracted with Boilerpipe and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Description} 		& If the Boilerpipe algorithm is activated in the configuration file and a test is run, the HTML file is extracted with Boilerpipe. \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
@@ -110,16 +107,52 @@ In this chapter, each system feature is specified.
 	\hline
 	\textbf{Name} 				& Integrate RSS feed algorithm \\ \hline
 	\textbf{Feature id} 		& f6 \\ \hline
-	\textbf{Description} 		& In the configuration file, all the tested algorithms are defined. If the RSS feed algorithm is activated and a test is run, the HTML file is extracted with the RSS feed algorithm and the result is compared with the text file. The outcome is put into the output file. \\ \hline
+	\textbf{Description} 		& If the RSS feed algorithm algorithm is activated in the configuration file and a test is run, the HTML file is extracted with the RSS feed algorithm. \\ \hline
 	\textbf{Relevance} 			& nice to have\\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
+	\textbf{Name} 				& Comparison of extracted text files \\ \hline
+	\textbf{Feature id} 		& f6 \\ \hline
+	\textbf{Description} 		& Each output file from the different algorithm needs to be compared to the text file with the actual content.
+								\begin{itemize}
+							        \item Split HTML document into blocks separated by HTML tags
+							        \item Define which blocks are content and which are boilerplate based on the text file which defines the content
+							        \item Define which blocks are content and which are boilerplate based on the output file of each text extraction algorithm
+							        \item Compare the results and categorize all blocks as true negative or false positive
+							        \item Put the results into an output text file (structure output file: tbd)
+						        \end{itemize}
+								\\ \hline
+	\textbf{Relevance} 			& nice to have\\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
 	\textbf{Name} 				& Analize data \\ \hline
 	\textbf{Feature id} 		& f7 \\ \hline
-	\textbf{Description} 		& The output file is read and the data is analyzed in a statistical way.\\ \hline
+	\textbf{Description} 		& The generated output data is used to perform some further calculations. Possible values to calculate are:
+									\begin{itemize}
+							        \item Presicion: $\frac{TP}{TP + FP}$
+							        \item Recall/True positive rate (TPR): $\frac{TP}{TP + FN}$
+							        \item false positive rate (FPR: $\frac{FP}{FP + TN}$
+							        \item F-measure: $2* \frac{presicion * recall}{presicion + recall}$
+							        \item Reciever Operation Characteristics (ROC): $TPR = f(FPR)$
+						        \end{itemize} \\ \hline
+	\textbf{Relevance} 			& needed \\ \hline
+	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Visualize data \\ \hline
+	\textbf{Feature id} 		& f7 \\ \hline
+	\textbf{Description} 		&  
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
