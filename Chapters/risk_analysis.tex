@@ -34,11 +34,11 @@ The new technologies which are present in this project are the following:
 
 Each of them brings its own risk.
 
-\subsection{Interface Boilerpipe}
+\subsection{Integration Boilerpipe}
 
 The Boilerplate algorithm needs to be integrated into the text extraction framework. Every interface of an external component is a possible risk factor.
 
-\subsection{Interface Justext}
+\subsection{Integration Justext}
 
 
 The Justext algorithm needs to be integrated into the text extraction framework. Every interface of an external component is a possible risk factor.
@@ -56,8 +56,8 @@ The development and implementation of a new algorithm is predestined to generate
 \textbf{Risk} & \textbf{Impact} & \textbf{Probability of occurrence} & \textbf{Risk factor} \\ \hline
 Unclear requirements & 2 & 4 & 8\\ \hline
 New technologies & 3 & 3 & 9 \\ \hline
-Interface Boilerpipe & 5 & 1 & 5\\ \hline
-Interface Justext & 5 & 5 & 20 \\ \hline
+Integration Boilerpipe & 5 & 1 & 5\\ \hline
+Integration Justext & 5 & 5 & 20 \\ \hline
 Implementation RSS algorithm & 1 & 5 & 5\\ \hline
 \end{tabular}
 \end{table}
@@ -76,20 +76,20 @@ It is important to do prototyping with new technologies in the first phase of th
 
 Gralde and Travic CI are needed in the first mile stone to set up the programming environment. So if there is any problem it will occur in a very early stage of the project and a possible solution can be found.
 
-The risks about python are related to the chapter \ref{subsec:Interface Justext}.
+The risks about python are related to the chapter \ref{risk_analysis/subsec:Integration Justext}.
 
-\subsection{Interface Boilerpipe}
+\subsection{Integration Boilerpipe}
 
 This risk is rated much lower than the Justext interface because it's implementation is in Java and it provides a Java API. Never then less a prototype should be done as soon as possible to prevent any nasty surprises with the interface.
 
-\subsection{Interface Justext}
-\label{subsec:Interface Justext}
+\subsection{Integration Justext}
+\label{subsec:Integration Justext}
 
 This point is classified as the highest risk of all. This is because the implementation is in Python and it is not clarified yet how it will be integrated into the text extraction framework. An analysis of possible solution with prototypes needs to be done as soon as possible.
 
 Possible solution are:
 \begin{itemize}
-\item jython (\url{http://www.jython.org/})
+\item jython (\url{http://www.jython.org})
 \item Implementation in Java
 \item Java Processor Interface 
 \end{itemize}
@@ -97,4 +97,6 @@ Possible solution are:
 
 \subsection{Implementation RSS algorithm}
 
-This risk has a very high probability of occurrence because it is very likely that a development and an implementation of a new algorithm is going to cause problems. There is no real solution to that risk. But because of this requirement is nice to have, the impact on the outcome of the project is very low. Further more Patrik Lengacher, the tutor of this project, is very experienced in this subject area and will be able to help out if any problems occur. 
+This risk has a very high probability of occurrence because it is very likely that a development and an implementation of a new algorithm is going to cause problems. There is no real solution to that risk. But because of this requirement is nice to have, the impact on the outcome of the project is very low. Further more Patrik Lengacher, the tutor of this project, is very experienced in this subject area and will be able to help out if any problems occur.
+
+\

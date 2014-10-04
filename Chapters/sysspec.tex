@@ -32,15 +32,19 @@ The context extraction framework will perform automated text extraction on a set
 
 \subsection{Operating Environment}
 
+The operation environment for the text extraction framework is defined in this section.
+
 \subsubsection{Local environment}
 
 \begin{tabular}{| p{3cm} | p{3cm} |}
 	\hline
+	Ubuntu & 12.04 \\
 	JDK & 1.7.X  \\ \hline
-	Gradle & 1.1 \\ \hline
+	Gradle & 1.11 \\ \hline
 	Eclipse Keppler & 2.X \\ \hline
 	git & 1.9.X \\ \hline
 	python & 2.7.X \\ \hline
+
 \end{tabular}
 
 
@@ -48,11 +52,12 @@ The context extraction framework will perform automated text extraction on a set
 
 \begin{tabular}{| p{3cm} | p{3cm} |}
 	\hline
+	Ubuntu & 12.04 \\ \hline
 	Open JDK & 1.6.X  \\ \hline
 	Open JDK & 1.7.X  \\ \hline
 	Oracle JDK & 1.7.X \\ \hline
 	Oracle JDK & 1.8.X  \\ \hline
-	Gradle & 1.1 \\ \hline
+	Gradle & 2.0 \\ \hline
 	Travis CI &  \\ \hline
 \end{tabular}
 
@@ -61,7 +66,7 @@ The context extraction framework will perform automated text extraction on a set
 \subsection{Design and Implementation Constraints}
 
 \subsubsection{User interface}
-As parts of the text extraction framework may be implemented in a server environment and a user interface is not desired from the client so there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction with the user is needed.
+As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client so there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction with the user is needed.
 
 
 \section{System Features}
@@ -75,7 +80,7 @@ This section specifies all system features. Each feature is specified more close
 \subsection{Basic functionality}
 Following diagram and text describes the basic functionality of the application.
 
-\includegraphics[width=24cm]{Pictures/Sysspec.png}
+\includegraphics[width=24cm]{Figures/App_overview.pdf}
 
 There are two folders defined by a configuration flies which. The HTML folder contains plain HTML files of web pages. The content folder contains text files with the relevant content of the related HTML files. As soon as a test is started the HTML file and the text file are read and the HTML file is extracted and classified with all the available algorithms. The result of the classification is then compared to the text file with the relevant content and performance data is generated. This performance data is then analyzed with statistical methods. 
 
@@ -85,22 +90,23 @@ There are two folders defined by a configuration flies which. The HTML folder co
 
 \subsection{Overview}
 
-	\begin{tabular}{ | p{1cm} | p{9cm} |p{3cm} |}
+	\begin{tabular}{ | p{0.5cm} | p{9cm} |p{2cm} |p{2.5cm} |}
 	\hline
-	\textbf{ID}	& \textbf{Name}   					& \textbf{Relevance}	\\ \hline
-	f1  		& Read configuration  								& needed 				\\ \hline
-	f2  		& Create test										& needed 				\\ \hline
-	f3  		& Integration Justext algorithm  					& needed 				\\ \hline
-	f4  		& Integration Boilerpipe algorithm  				& needed 				\\ \hline
-	f5  		& Evaluation and Implementation RSS feed algorithm 	& nice to have			\\ \hline
-	f6  		& Evaluation of Classification Text					& needed 				\\ \hline
-	f7  		& Evaluation of Classification Block	  			& nice to have			\\ \hline
-	f8  		& Analyze Data 										& needed 				\\ \hline
+	\textbf{ID}	& \textbf{Name} 									& \textbf{Chapter}    											& \textbf{Relevance}	\\ \hline
+	f1  		& Read configuration 								& \ref{subsec:Read configuration}  								& needed 				\\ \hline
+	f2  		& Create test 										& \ref{subsec:Create test}										& needed 				\\ \hline
+	f3  		& Integration Justext algorithm 					& \ref{subsec:Integration Justext algorithm} 					& needed 				\\ \hline
+	f4  		& Integration Boilerpipe algorithm 					& \ref{subsec:Integration Boilerpipe algorithm}  				& needed 				\\ \hline
+	f5  		& Evaluation and Implementation RSS feed algorithm 	& \ref{subsec:Evaluation and Implementation RSS feed algorithm} & nice to have			\\ \hline
+	f6  		& Evaluation of classification text 				& \ref{subsec:Evaluation of classification text}				& needed 				\\ \hline
+	f7  		& Evaluation of classification blocks 				& \ref{subsec:Evaluation of classification blocks}	  			& nice to have			\\ \hline
+	f8  		& Analyze data 										& \ref{subsec:Analyze data}										& needed 				\\ \hline
 	\end{tabular} \\
 
 
 
 \subsubsection{Read configuration}
+\label{subsec:Read configuration}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
@@ -122,7 +128,7 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\end{tabular} \\
 
 \subsubsection{Create test}
-
+\label{subsec:Create test}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
@@ -134,7 +140,7 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\end{tabular} \\
 
 \subsubsection{Integration Justext algorithm}
-
+\label{subsec:Integration Justext algorithm}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
@@ -145,7 +151,8 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
-\subsubsection{Integrate Boilerpipe algorithm}
+\subsubsection{Integration Boilerpipe algorithm}
+\label{subsec:Integration Boilerpipe algorithm}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
@@ -156,7 +163,8 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
-\subsubsection{Integrate RSS feed algorithm}
+\subsubsection{Evaluation and Implementation RSS feed algorithm}
+\label{subsec:Evaluation and Implementation RSS feed algorithm}
 
 \begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
@@ -168,15 +176,16 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\end{tabular} \\
 
 \subsubsection{Evaluation of classification text}
+\label{subsec:Evaluation of classification text}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Evaluation of classification \\ \hline
 	\textbf{Feature id} 		& f6 \\ \hline
-	\textbf{Description} 		& All the text extraction algorithms return an extracted document as text. This document needs to be checked for correctness. To do so the result from the algorithms is compared with the predefined content. This evaluation and classification is defined in more detail here: \ref{subsec:Further explanation for evaluation of classification}
+	\textbf{Description} 		& All the text extraction algorithms return an extracted document as text. This document needs to be checked for correctness. To do so the result from the algorithms is compared with the predefined content. This evaluation and classification is defined in more detail in section \ref{subsec:Evaluation of classification}.
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if it's content can be found in the content file
-							        \item Categorize all blocks as true negative and false positive
+							        \item Categorize text as boilerplate or content
 							        \item Put the results into an output text file (structure output file: tbd)
 						        \end{itemize} \\ \hline
 	\textbf{Relevance} 			& needed\\ \hline
@@ -185,15 +194,16 @@ There are two folders defined by a configuration flies which. The HTML folder co
 
 
 \subsubsection{Evaluation of classification blocks}
+\label{subsec:Evaluation of classification blocks}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Evaluation of classification blocks \\ \hline
 	\textbf{Feature id} 		& f6 \\ \hline
-	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text is classified but each block of an HTML file. To do so, the implementation of Justext and Boilerpipe have to be addapted that they return classified blocks instead of the extracted text. These blocks are then compared with the predefined content and classified. This evaluation and classification is defined in more detail in following section: \ref{subsec:Further explanation for evaluation of classification}
+	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text is classified but each block of an HTML file. To do so, the implementation of Justext and Boilerpipe have to be adapted that they return classified blocks instead of the extracted text. These blocks are then compared with the predefined content and classified. This evaluation and classification is defined in more detail in section \ref{subsec:Evaluation of classification}.
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if it's content can be found in the content file
-							        \item Categorize all blocks as true negative and false positive
+							        \item Categorize all blocks as boilerplate or content
 							        \item Put the results into an output text file (structure output file: tbd)
 						        \end{itemize} \\ \hline
 	\textbf{Relevance} 			& nice to have\\ \hline
@@ -204,13 +214,14 @@ There are two folders defined by a configuration flies which. The HTML folder co
 
 
 
-\subsubsection{Analyze data}
+\subsection{Analyze data}
+\label{subsec:Analyze data}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Analyze data \\ \hline
 	\textbf{Feature id} 		& f7 \\ \hline
-	\textbf{Description} 		&  From the results of the comparison several further values can be evaluated for a better understanding of the results. These values are described in more detail in following section: \ref{subsec:Further explanation for evaluation of classification}
+	\textbf{Description} 		&  From the results of the comparison several further values can be evaluated for a better understanding of the results. These values are described in more detail in section \ref{subsec:Analytical values}.
 								    \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
@@ -232,115 +243,105 @@ There are two folders defined by a configuration flies which. The HTML folder co
 	\end{tabular} \\
 
 
-\subsection{Further explanation for evaluation of classification}
-\label{subsec:Further explanation for evaluation of classification}
+\subsection{Evaluation of classification}
+\label{subsec:Evaluation of classification}
 
 
 The general meaning of the expressions true positive, true negative, false positive and false negative related to the text extraction topic is shown in following table:
 
 \begin{table}[h]
-\begin{tabular}{|p{4cm} |p{5cm} |p{5cm} |}\hline
+\begin{tabular}{|p{4cm} |p{5.5cm} |p{5.5cm} |}\hline
           								& \textbf{Classified as content} 	& \textbf{Classified as boilerplate} 	\\ \hline
-\textbf{Acutal content} 				& True positive (TP)				& True negative (TN)					\\ \hline
-\textbf{Actual boilerplate} 			& True negative (TN)       			& False negative (FN)				 	\\ \hline
+\textbf{Acutal content} 				& True positive (TP)				& False negative(FN)					\\ \hline
+\textbf{Actual boilerplate} 			& False positive (FP)       		& True negative (TN)				 	\\ \hline
 \end{tabular}
 \end{table}
 
-
-\subsubsection{Evaluation the results as text}
-
-When the results are compared based on the text, the expressions are interpreted as follow:
+When the results are compared based on words, the expressions are interpreted as follow.
 
  \begin{table}[h]
-\begin{tabular}{|p{4cm} |p{5cm} |p{5cm} |}
-\hline         								& \textbf{Classified as content} 							& \textbf{Classified as boilerplate} 	\\ \hline
-\textbf{Acutal content} 				& Number of words classified as content and are content		& Number of words classified as content but are boilerplate			\\ \hline
-\textbf{Actual boilerplate} 			& Number of words classified as content but are boilerplate & Number of words classified as boilerplate and are boilerplate	 	\\ \hline
+\begin{tabular}{|p{4cm} |p{5.5cm} |p{5.5cm} |}
+\hline         								& \textbf{Classified as content} 				& \textbf{Classified as boilerplate} 					\\ \hline
+\textbf{Acutal content} 				& Word classified as content by algorithm and is content		& Word classified as content by algorithm but is boilerplate		\\ \hline
+\textbf{Actual boilerplate} 			& Word classified as content by algorithm but is boilerplate 	& Word classified as boilerplate by algorithm and is Boilerplate	\\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Evaluation the results as blocks}
-
-When the results are compared based on HTML blocks, the expressions are interpreted as follow:
-
-When the results are compared based on the text the expressions are interpreted as follow:
+When the results are compared based on HTML blocks, the expressions are interpreted as follow.
 
  \begin{table}[h]
-\begin{tabular}{|p{4cm} |p{5cm} |p{5cm} |}
-\hline         								& \textbf{Classified as content} 								& \textbf{Classified as boilerplate} 								\\ \hline
-\textbf{Acutal content} 				& Number of blocks classified as content and are content		& Number of blocks classified as content but are boilerplate		\\ \hline
-\textbf{Actual boilerplate} 			& Number of blocks classified as content but are boilerplate 	& Number of blocks classified as boilerplate and are boilerplate	\\ \hline
+\begin{tabular}{|p{4cm} |p{5.5cm} |p{5.5cm} |}
+\hline         							& \textbf{Classified as content} 								& \textbf{Classified as boilerplate} 								\\ \hline
+\textbf{Acutal content} 				& Block is classified as content by algorithm and is content		& Block is classified as content by algorithm but is boilerplate		\\ \hline
+\textbf{Actual boilerplate} 			& Block is classified as content by algorithm but is boilerplate 	& Block is classified as boilerplate by algorithm and is boilerplate	\\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Analytical values}
+To sum this up TP + FN is the correct outcome of the algorithm i.e. content classified as content and boilerplate as boilerplate and TN + FP on the other hand is the wrong outcome of the algorithm i.e. content classified as boilerplate and boilerplate as content.
 
+
+
+\subsection{Analytical values}
+\label{subsec:Analytical values}
+
+In this paragraph we use the notion of objects instead of word/block.
 The results of the comparison deliver basic characteristics which can be used to calculate statistical values which help to analyze the test outcome.
 										
-\textbf{Recall / Sensitivity /True positive rate / TPR }
+\textbf{ Sensitivity / Recall /True positive rate / TPR / Hitrate }
 
-Recall is the probability that a relevant document is retrieved in a search.
+Recall is the probability that a relevant document is retrieved in a search which in our case is
 
 \begin{equation}
  Recall =\frac{TP}{TP + FN}
 \end{equation}
 
+correct classified content objects divided by the sum of all actual objects.
+
 \textbf{Precision / True negative rate / TNR} 
 
 
-Precision is the probability that a retrieved document is relevant.
+Precision is the probability that a retrieved document is relevant which in our case is
 
 \begin{equation}
  Presicion = \frac{TP}{TP + FP}
 \end{equation}
 
+correct classified content objects divided by the sum of all objects classified as content.
 
 \textbf{F-measure / F1-score / F-score} 
 
-F-measure is a measure of the test's accuracy so it is the weighted harmonic mean of precision and recall.
+F-measure is the weighted harmonic mean of precision and recall which in our case is
 
 \begin{equation}
 Fmeasure =  2* \frac{presicion * recall}{presicion + recall}
 \end{equation}
 
+a measure of the test's accuracy.
+
+
+
 \textbf{Fallout / False positive rate / FPR}
 
-Fallout is the proportion of non-relevant documents that are retrieved, out of all non-relevant documents available.
+Fallout is the proportion of non-relevant objects that are retrieved, out of all non-relevant objects available which in our case is
 
 \begin{equation}
-Fallout =  2* \frac{FP}{FP + TN}
+Fallout = \frac{FP}{FP + TN}
 \end{equation}
 
-\textbf{Reciever Operation Characteristics (ROC)}
+%\textbf{Accuracy}
 
-The ROC curve is the sensitivity as a function of fall-out which illustrates the performance of a classifier. It can be used to find the best results using different parameters.
+%\begin{equation}
+%Accuracy =  \frac{TP+FN}{TP+TN+FP+FN}
+%\end{equation}
 
-\begin{equation}
- ROC = TPR = f(FPR)
-\end{equation}
 
 \section{External Interface Requirements}
 
 \subsection{Boilerpipe}
 
-The boilerpipe algorithm is already implemented in Java so it is easy to integrate. The API can be found under following link. 
-\url{https://code.google.com/p/boilerpipe/}
-
-Other useful links:
-
-Getting started:
-\url{http://code.google.com/p/boilerpipe/wiki/QuickStart}
-
-javadoc extractor:
-\url{http://boilerpipe.googlecode.com/svn/trunk/boilerpipe-core/javadoc/1.0/de/l3s/boilerpipe/extractors/ExtractorBase.HTML}
-
+The boilerpipe algorithm is implemented in Java and the documentation is found under
+\url{https://code.google.com/p/boilerpipe/}.
 
 \subsection{justext}
 
-The justext algorithem is implemented in python and it is not yet defined how it will be integrated into the text extraction framework. See risk analysis for further information.
-The documentation can be found under following link: 
-
-\url{https://code.google.com/p/justext/}
-
-jython:
-http://www.jython.org/
+The justext algorithem is implemented in python and the documentation is found under \url{https://code.google.com/p/justext/}. It is not yet defined how it will be integrated into the text extraction framework. See risk analysis for further information (\ref{subsec:Integration Justext}.).
