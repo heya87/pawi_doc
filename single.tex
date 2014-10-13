@@ -34,6 +34,12 @@
 \usepackage{listings}
 \usepackage{hyperref}
 \usepackage{lscape}
+\usepackage{pdflscape}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{10pt}{\Large}
 
 \usepackage[square, numbers, comma, sort&compress]{natbib}
 \usepackage{mathtools}
@@ -51,6 +57,7 @@
 
 \pagestyle{fancy} % Return the page headers back to the "fancy" style
 
+
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
@@ -64,6 +71,6 @@
 %\input{Chapters/Chapter11}
 %\input{Chapters/planning}
 \input{Chapters/sysspec}
-\input{Chapters/risk_analysis}
+%\input{Chapters/risk_analysis}
 
 \end{document}  
