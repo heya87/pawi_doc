@@ -12,6 +12,18 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
+\section{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version & Date      & Change & Author \\ \hline
+    0.1     & 15.09.2014        & Setup document                                        & JR \\ \hline
+    1.0     & 28.09.2014        & Draft planning                                        & JR \\ \hline
+    1.1     & 18.09.2014        & Adding overview                                       & JR \\ \hline
+    1.2     & 6.10.2014        & Stories for MS2                                       & JR \\ \hline
+
+\end{tabular}
 
 \section{Planning concept}
 
@@ -191,28 +203,67 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Implementation Testframework \\ \hline
+    \textbf{Title} & Implementation Config Reader \\ \hline
     \textbf{Id} & s6\\ \hline
-    \textbf{Estimated time} & 20h \\ \hline
-    \textbf{Description} & Implementation of a first part of the test framework. This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} & The configuration for the test framework is located in a text file in the resources folder of the project. The data is formated  in a key value structure. This text file is read at the startup of the program and saved in a Config object.\\ 
     \hline
     \end{tabular} \\\\
 
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Prototype Integration of justext/boilerpipe\\ \hline
+    \textbf{Title} & Implementation File Reader \\ \hline
     \textbf{Id} & s7\\ \hline
-    \textbf{Estimated time} & 4h \\ \hline
-    \textbf{Description} &  Implementation of a small prototype which uses the existing implementation of justext and boilerpipe. A final interface for both components needs to be defined for further use.
-    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} & The html and content files are located in two folders (content/html) in the resources folder of the project.. For each file pair with the same name, a test object is generated and the content of the file is read and put into the test objects.\\ 
     \hline
     \end{tabular} \\\\
+
+
+        \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation File Writer \\ \hline
+    \textbf{Id} & s8\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} & The results of a test is written in an output text file into the resources folder of the project.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+            \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation Test Manager \\ \hline
+    \textbf{Id} & s9\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} & The Test Manager contains the business logic of the program and coordinates the reading, testing and writing.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prototype Integration of boilerpipe\\ \hline
+    \textbf{Id} & s10\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} &  Implementation of a small prototype which uses the existing implementation of boilerpipe. A final interface for boilerpipe is defined for further use.\\ 
+    \hline
+    \end{tabular} \\\\
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prototype Integration of justext\\ \hline
+    \textbf{Id} & s11 \\ \hline
+    \textbf{Estimated time} & 12h \\ \hline
+    \textbf{Description} &  Implementation of a small prototype which uses the existing implementation of justext. A final interface for justext is defined for further use. \\ 
+    \hline
+    \end{tabular} \\\\
+
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
     \textbf{Title} & Collection of test data\\ \hline
-    \textbf{Id} & s8\\ \hline
+    \textbf{Id} & s12\\ \hline
     \textbf{Estimated time} & 8h \\ \hline
     \textbf{Description} &  To evaluate the functionality of the text extraction algorithms, a certain amount of test data is needed. This test data contains HTML files of several web pages. The HTML code is categorized into content and boilerplate.\\ 
     \hline
