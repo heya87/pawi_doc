@@ -4,7 +4,7 @@
 
 \label{ChapterX} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{\emph{MS1 meeting report}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{\emph{MS2 meeting report}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -19,8 +19,9 @@ This document is a short report about the MS1 meeting. The meeting took place on
 
 \begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
     \hline
-    Version & Date      & Change & Author \\ \hline
-    0.1    & 20.10.2014        & Setup document                                        & JR \\ \hline
+    Version 	& Date      		& Change & Author 								\\ \hline
+    0.1    		& 20.10.2014        & Setup document        				& JR 	\\ \hline
+    1.0 		& 27.10.2014 		& add meeting report 					& JR 	\\ \hline
 \end{tabular}
 
 
@@ -34,15 +35,29 @@ This document is a short report about the MS1 meeting. The meeting took place on
 
 \begin{itemize}
 \item Elaborated software architecture
-\item Tested code of test framework (tbd: which components)
+\item Tested code of test framework (reader / writer)
 \item Interface definition for justext/boilerplate components
 \item HTML test data
-\end{itemize}\\
+\end{itemize}
+
 
 \section{Decisions}
 
+All delivery objects are approved. We discussed the text comparison and came to a conclusion that I am going to search for diff tool libraries to do the comparison of text files. Mr. Kaufmann sent me some proposal later on.
+
 
 \section{Rework}
+
+There is no rework to do.
+The proposed diff tool libraries are
+
+\begin{itemize}
+\item https://code.google.com/p/google-diff-match-patch/
+\item https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html
+\end{itemize}
+
+
+The next milestone, which is the implementation of the whole test framework and integration of justext and boilerpipe, is already achieved as well. We decided that MS3 is obsolete and we are going to meet again if there are any ambiguity and if there is not, for MS4.
 
 
 
