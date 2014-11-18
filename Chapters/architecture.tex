@@ -160,21 +160,41 @@ The ConfigReader class reads the config.txt file and puts the key value pairs in
 
 This chapter describes the used frameworks and tools which are used during the development process.
 
-\subsubsections{Development tools}
-\subsubsection{git}
-\subsubsection{Gradle}
-\subssubsection{Travic CI}
-\subsubsection{Eclipse}
-\subsection{Frameworks and APIs}
+\subsection{git}
 
-\subsubsection{Justext}
+Git is a distributed version control system. Unlike other version control systems like Subversion, git is not using a central server but each user has his own copy with the complete history on the local system. It is much easier to work with additional branches or tags. 
+Because of these advantages and because Layzapp is working with it as well, git was chosen to use for this project for the code sources and as well for the documentation.
+The resources are open source and are available under following links.
 
-\subsubsection{Boilerpipe}
-
-\subsubsection{TestNG}
+\begin{itemize}
+\item code: \url{https://github.com/heya87/pawiTwo}
+\item documentation: \url{https://github.com/heya87/pawi_doc}
+\end{itemize}
 
 
+\subsection{Gradle}
 
+Gradle is a project automation tool which uses a Groovy-based domain-specific language (DSL) instead of the more traditional XML form of declaring the project configuration. All the dependencies of the project are handled with Gradle and it is very easy to deploy on a new system. The user only needs to download the git repository and can build the project with the Gradle wrapper without installing any new software. All dependencies are then downloaded automatically and the user can start working without caring about missing packages.
+The build process is defined in the build.gradle file which is located in the source directory of the project. 
+
+\subsection{Travic CI}
+
+Travic CI is an open source build server. It is easy to use in combination with git. One only needs to add a config file in the source directory of the project and define the git repository. Afterwards the project is build for every change. If the build does not pass, a mail is sent to the user. The actual status of the build can be found under following link \url{https://travis-ci.org/heya87/pawiTwo}.
+
+\subsection{Justext}
+
+An implementation of the Justext algorithm is available in Python. The ressources are available under following link \url{https://code.google.com/p/justext/}. There is no implementation in Java so for the first approach the python application is called from Java with a ProcessBuilder.
+The command to extract an HTML file with justext is very simple:
+
+\begin {lstlisting}
+justext -s English /path/page.html > cleaned-page.txt
+\end{lstlisting}
+
+This command extracts the HTMl file page.html into a text file called cleaned-page.txt. The Java ProcessBuilder performs system commands as they are used in a console and can handle the outcome if needed. For the project there is no return values needed. The needed content is the generated text file which is then read and processed for further use.
+
+\subsection{Boilerpipe}
+
+An implementation of the Boilerpipe Algorithm is available in Java. The resources are available under following link \url{https://code.google.com/p/boilerpipe/}. This algorithm can be used out of the box with calls against the Java API.
 
 
 \section{Process view}

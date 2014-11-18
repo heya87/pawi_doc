@@ -1,0 +1,86 @@
+apply plugin: 'java'
+
+apply plugin:'application'
+
+mainClassName = "com.pawi.main.Main"
+
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'Text extraction framework', 'Implementation-Version': 1
+	}
+}
+
+// task to generate wrapper
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.0'
+}
+
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	apply plugin: 'jacoco'
+
+}
+
+
+repositories {
+	jcenter()
+	
+    mavenCentral()
+	maven {
+		url "http://boilerpipe.googlecode.com/svn/repo/"
+	}
+}
+
+dependencies {
+	testCompile 'org.testng:testng:6.8.7'
+	testCompile 'org.mockito:mockito-all:1.9.5'
+	compile 'org.slf4j:slf4j-api:1.7.7'
+	compile 'org.slf4j:slf4j-simple:1.7.7'
+	compile 'commons-io:commons-io:2.4'
+	compile 'org.apache.commons:commons-lang3:3.3.2'
+	compile 'de.l3s.boilerpipe:boilerpipe:1.2.0'
+	compile 'ch.bind:philib:0.12.0'
+	compile 'net.sourceforge.nekohtml:nekohtml:1.9.21'
+	compile 'xerces:xercesImpl:2.11.0'
+    compile 'net.swisstech:logger:1.0.0'
+    compile 'org.jsoup:jsoup:1.7.2'
+    compile 'edu.stanford.nlp:stanford-corenlp:3.4.1'
+    compile 'org.apache.tika:tika-parsers:1.6'
+
+}
+
+test {
+	useTestNG()
+}
+
+jacoco {
+	toolVersion = "0.7.1.201405082137"
+	reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+	group = "Reporting"
+	description = "Generate Jacoco coverage reports after running tests."
+	additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination "${buildDir}/jacocoHtml"
+	}
+}
+
+sourceSets {
+	main { runtimeClasspath += files(output.resourcesDir) }
+	test { runtimeClasspath += files(output.resourcesDir) }
+}
+
+// creating all directories eclipse expects to be present
+	eclipseProject.doLast {
+	sourceSets*.java.srcDirs*.each { it.mkdirs() }
+	sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.26)  6 NOV 2014 09:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.26)  9 NOV 2014 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1093,22 +1093,99 @@ LaTeX Info: Redefining \nameref on input line 51.
 \openout4 = `single.out'.
 
  ABD: EveryShipout initializing macros
-(./Chapters/abbreviation.tex
+(./Chapters/architecture.tex
 Chapter 1.
 ------------------------------------------------------------------------------
- 1 Chapter Title Here
+ 1 Software Architecture
 ------------------------------------------------------------------------------
-------------------------------------------------------------------------------
- Abbreviations
-------------------------------------------------------------------------------
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (28.86548pt too wide) in paragraph at lines 15--27
+[] 
+ []
+
+<Figures/App_overview.pdf, id=103, 1017.8025pt x 335.2525pt>
+File: Figures/App_overview.pdf Graphic file (type pdf)
+
+<use Figures/App_overview.pdf>
+Package pdftex.def Info: Figures/App_overview.pdf used on input line 41.
+(pdftex.def)             Requested size: 426.79134pt x 140.58pt.
+
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 41--42
+[][] 
+ []
+
 [1
 
 
 
-{/home/joel/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/home/joel/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./Figures/App_o
+verview.pdf>] <Figures/dataModel.pdf, id=121, 435.6275pt x 277.035pt>
+File: Figures/dataModel.pdf Graphic file (type pdf)
 
-])
+<use Figures/dataModel.pdf>
+Package pdftex.def Info: Figures/dataModel.pdf used on input line 53.
+(pdftex.def)             Requested size: 398.33858pt x 253.31967pt.
+ [3 <./Figures/dataModel.pdf>] [4]
+<Figures/architecutre.pdf, id=133, 742.775pt x 387.4475pt>
+File: Figures/architecutre.pdf Graphic file (type pdf)
+
+<use Figures/architecutre.pdf>
+Package pdftex.def Info: Figures/architecutre.pdf used on input line 79.
+(pdftex.def)             Requested size: 654.41338pt x 341.36278pt.
+ [5
+
+ <./Figures/architecutre.pdf>]
+<Figures/activityDiagram.pdf, id=141, 386.44376pt x 332.24126pt>
+File: Figures/activityDiagram.pdf Graphic file (type pdf)
+
+<use Figures/activityDiagram.pdf>
+Package pdftex.def Info: Figures/activityDiagram.pdf used on input line 83.
+(pdftex.def)             Requested size: 426.79134pt x 366.93161pt.
+
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 83--84
+[][] 
+ []
+
+[6
+
+ <./Figures/activityDiagram.pdf>]
+Overfull \hbox (2.49834pt too wide) in paragraph at lines 97--97
+[]|\OT1/cmr/m/n/10.95 testManager| 
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 98--99
+[]|\OT1/cmr/m/n/10.95 The Test-Man-ager class man-ages the whole
+ []
+
+
+Overfull \hbox (16.8655pt too wide) in alignment at lines 90--156
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 156
+ []
+
+[7] [8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 170.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
+ [9])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
+ [10]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 
 (./single.aux)
@@ -1121,43 +1198,53 @@ Package rerunfilecheck Warning: File `single.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `single.out':
-(rerunfilecheck)             Before: 2D3799D7EB5BE30B3239528DDE7C8731;900
-(rerunfilecheck)             After:  A7278D4E2331FA5172A4EEBA4018AE04;409.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Before: 24C0745B5A76B8CDB03FE7B2FCA23D41;3417
+(rerunfilecheck)             After:  EE502A3814164E26F95BE3C2B03BBD85;2970.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 23451 strings out of 494976
- 394933 string characters out of 6179137
- 554960 words of memory out of 5000000
- 26270 multiletter control sequences out of 15000+600000
- 4853 words of font info for 18 fonts, out of 8000000 for 9000
+ 23853 strings out of 494976
+ 399178 string characters out of 6179137
+ 577960 words of memory out of 5000000
+ 26613 multiletter control sequences out of 15000+600000
+ 10488 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,5n,59p,435b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.7} has been referenced but does not exist
+ 63i,11n,59p,897b,1034s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{section.112} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.111} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
-replaced by a fixed one
+pdfTeX warning (dest): name{subsection.110} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
-replaced by a fixed one
+pdfTeX warning (dest): name{subsection.109} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
-replaced by a fixed one
+pdfTeX warning (dest): name{subsection.108} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
+pdfTeX warning (dest): name{subsection.107} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.106} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.105} has been referenced but does not ex
+ist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on single.pdf (2 pages, 32594 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on single.pdf (10 pages, 607786 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
