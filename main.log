@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.26)  18 NOV 2014 18:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.26)  3 DEC 2014 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,12 +1023,6 @@ LaTeX Warning: Label `ChapterX' multiply defined.
 
 LaTeX Warning: Label `ChapterX' multiply defined.
 
-
-LaTeX Warning: Label `ChapterX' multiply defined.
-
-
-LaTeX Warning: Label `ChapterX' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1197,34 +1191,40 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (./Chapters/approach.tex [3]
 Chapter 2.
 ------------------------------------------------------------------------------
- 2 Approach
+ 2 Solution Development
 ------------------------------------------------------------------------------
-
-LaTeX Warning: Reference `sec:Chapters/planning' on page 4 undefined on input l
-ine 19.
-
 [4
 
-]) (./Chapters/results.tex [5]
+] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]\OT1/cmr/bx/n/10.95 Calculation based on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--88
+[]\OT1/cmr/bx/n/10.95 Calculation based on
+ []
+
+) (./Chapters/results.tex [7]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 Results
 ------------------------------------------------------------------------------
-) (./Chapters/LessonLearned.tex [6
+) (./Chapters/LessonLearned.tex [8
 
 ]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Lesson learned
 ------------------------------------------------------------------------------
-) (./Chapters/FurtherWork.tex [7
+) (./Chapters/FurtherWork.tex [9
 
 ]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 Further work
 ------------------------------------------------------------------------------
-) (./Chapters/planning.tex [8
+) (./Chapters/planning.tex [10
 
 ]
 Appendix A.
@@ -1232,378 +1232,378 @@ Appendix A.
  A Planning
 ------------------------------------------------------------------------------
 
-Overfull \hbox (28.86548pt too wide) in paragraph at lines 18--27
+Overfull \hbox (28.86548pt too wide) in paragraph at lines 17--26
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/cmr/bx/n/10.95 Estimated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/cmr/bx/n/10.95 Hours
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 []\OT1/cmr/bx/n/10.95 Closing
  []
 
 
-Overfull \hbox (24.4127pt too wide) in paragraph at lines 42--52
+Overfull \hbox (24.4127pt too wide) in paragraph at lines 41--51
 [] 
  []
 
-[9
+[11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 []\OT1/cmr/bx/n/10.95 Delivery
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
 []\OT1/cmr/m/n/10.95 Milestone
  []
 
 
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 56--94
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 55--93
 [] 
  []
 
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
 []\OT1/cmr/bx/n/10.95 Estimated
  []
 
 
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 103--115
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 102--114
 [][] 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 118--126
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 117--125
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--126
+Underfull \hbox (badness 10000) in paragraph at lines 117--125
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 127--135
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 126--134
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--135
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--135
+Underfull \hbox (badness 10000) in paragraph at lines 126--134
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 137--145
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 136--144
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--145
+Underfull \hbox (badness 10000) in paragraph at lines 136--144
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--145
-
- []
-
-[12]
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 147--155
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--155
-
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 157--165
-[][] 
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 167--181
-[][] 
- []
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 192--192
-[]\OT1/cmr/bx/n/10.95 Estimated
- []
-
-
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 190--199
-[][] 
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 204--212
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--212
-
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 214--222
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--222
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--222
+Underfull \hbox (badness 10000) in paragraph at lines 136--144
 
  []
 
 [14]
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 224--232
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 146--154
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--232
+Underfull \hbox (badness 10000) in paragraph at lines 146--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 224--232
+Underfull \hbox (badness 10000) in paragraph at lines 146--154
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 234--242
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 156--164
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--242
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--242
-
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 244--252
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 166--180
 [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--252
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 244--252
-
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 253--261
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--261
-
- []
-
-
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 263--271
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--271
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--271
-
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 284--284
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
 []\OT1/cmr/bx/n/10.95 Estimated
  []
 
 
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 282--290
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 189--198
 [][] 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 293--302
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 203--211
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--302
+Underfull \hbox (badness 10000) in paragraph at lines 203--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--302
+Underfull \hbox (badness 10000) in paragraph at lines 203--211
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 304--313
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 213--221
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--313
+Underfull \hbox (badness 10000) in paragraph at lines 213--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--313
+Underfull \hbox (badness 10000) in paragraph at lines 213--221
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 327--327
-[]\OT1/cmr/bx/n/10.95 Estimated
- []
-
-
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 325--334
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 223--231
 [][] 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 337--346
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--346
+Underfull \hbox (badness 10000) in paragraph at lines 223--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--346
+Underfull \hbox (badness 10000) in paragraph at lines 223--231
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 347--356
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 233--241
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--356
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--356
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
+
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 243--251
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--251
+
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 252--260
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--260
+
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 262--270
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--270
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 367--367
+Underfull \hbox (badness 10000) in paragraph at lines 283--283
 []\OT1/cmr/bx/n/10.95 Estimated
  []
 
 
-Overfull \hbox (16.8655pt too wide) in paragraph at lines 365--374
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 281--289
 [][] 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 377--385
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 292--301
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
+Underfull \hbox (badness 10000) in paragraph at lines 292--301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--385
+Underfull \hbox (badness 10000) in paragraph at lines 292--301
 
  []
 
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 387--395
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 303--312
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--395
+Underfull \hbox (badness 10000) in paragraph at lines 303--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--395
+Underfull \hbox (badness 10000) in paragraph at lines 303--312
 
  []
 
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]\OT1/cmr/bx/n/10.95 Estimated
+ []
 
-Overfull \hbox (4.86551pt too wide) in paragraph at lines 396--404
+
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 324--333
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--404
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 336--345
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--404
+Underfull \hbox (badness 10000) in paragraph at lines 336--345
 
  []
 
-) (./Chapters/risk_analysis.tex [18]
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 346--355
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--355
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 366--366
+[]\OT1/cmr/bx/n/10.95 Estimated
+ []
+
+
+Overfull \hbox (16.8655pt too wide) in paragraph at lines 364--373
+[][] 
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 376--384
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 376--384
+
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 386--394
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--394
+
+ []
+
+
+Overfull \hbox (4.86551pt too wide) in paragraph at lines 395--403
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--403
+
+ []
+
+) (./Chapters/risk_analysis.tex [20]
 Appendix B.
 ------------------------------------------------------------------------------
  B Risk Analysis
@@ -1613,14 +1613,14 @@ Overfull \hbox (28.86548pt too wide) in paragraph at lines 15--23
 [] 
  []
 
-[19
+[21
 
 ]
 Overfull \hbox (19.10002pt too wide) in paragraph at lines 65--74
 [][] 
  []
 
-[20] [21]) (./Chapters/sysspec.tex [22]
+[22] [23]) (./Chapters/sysspec.tex [24]
 Appendix C.
 ------------------------------------------------------------------------------
  C Software Requirement Specification
@@ -1630,15 +1630,15 @@ Overfull \hbox (28.86548pt too wide) in paragraph at lines 15--27
 [] 
  []
 
-[23
+[25
 
-] [24] [25] <Figures/App_overview.pdf, id=802, 1017.8025pt x 335.2525pt>
+] [26] [27] <Figures/App_overview.pdf, id=842, 1017.8025pt x 335.2525pt>
 File: Figures/App_overview.pdf Graphic file (type pdf)
 
 <use Figures/App_overview.pdf>
 Package pdftex.def Info: Figures/App_overview.pdf used on input line 99.
 (pdftex.def)             Requested size: 682.86613pt x 224.93517pt.
- [26
+ [28
 
  <./Figures/App_overview.pdf>]
 Overfull \hbox (28.86548pt too wide) in paragraph at lines 109--121
@@ -1670,7 +1670,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--157
 
  []
 
-[27
+[29
 
 ]
 Overfull \hbox (33.31825pt too wide) in paragraph at lines 161--169
@@ -1702,7 +1702,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--193
 
  []
 
-[28]
+[30]
 Overfull \hbox (33.31825pt too wide) in paragraph at lines 197--214
 [] 
  []
@@ -1722,7 +1722,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--234
 
  []
 
-[29]
+[31]
 Overfull \hbox (33.31825pt too wide) in paragraph at lines 242--251
 [] 
  []
@@ -1753,7 +1753,7 @@ Overfull \hbox (45.31824pt too wide) in paragraph at lines 279--284
 [][] 
  []
 
-[30] [31]) (./Chapters/architecture.tex [32]
+[32] [33]) (./Chapters/architecture.tex [34]
 Appendix D.
 ------------------------------------------------------------------------------
  D Software Architecture
@@ -1763,7 +1763,7 @@ Overfull \hbox (28.86548pt too wide) in paragraph at lines 15--27
 [] 
  []
 
-[33
+[35
 
 ]
 File: Figures/App_overview.pdf Graphic file (type pdf)
@@ -1775,23 +1775,23 @@ Overfull \hbox (9.31827pt too wide) in paragraph at lines 41--42
 [][] 
  []
 
-[34] <Figures/dataModel.pdf, id=872, 435.6275pt x 277.035pt>
+[36] <Figures/dataModel.pdf, id=912, 435.6275pt x 277.035pt>
 File: Figures/dataModel.pdf Graphic file (type pdf)
 
 <use Figures/dataModel.pdf>
 Package pdftex.def Info: Figures/dataModel.pdf used on input line 53.
 (pdftex.def)             Requested size: 398.33858pt x 253.31967pt.
- [35 <./Figures/dataModel.pdf>] [36]
-<Figures/architecutre.pdf, id=884, 742.775pt x 387.4475pt>
+ [37 <./Figures/dataModel.pdf>] [38]
+<Figures/architecutre.pdf, id=925, 742.775pt x 387.4475pt>
 File: Figures/architecutre.pdf Graphic file (type pdf)
 
 <use Figures/architecutre.pdf>
 Package pdftex.def Info: Figures/architecutre.pdf used on input line 79.
 (pdftex.def)             Requested size: 654.41338pt x 341.36278pt.
- [37
+ [39
 
  <./Figures/architecutre.pdf>]
-<Figures/activityDiagram.pdf, id=893, 386.44376pt x 332.24126pt>
+<Figures/activityDiagram.pdf, id=933, 386.44376pt x 332.24126pt>
 File: Figures/activityDiagram.pdf Graphic file (type pdf)
 
 <use Figures/activityDiagram.pdf>
@@ -1802,7 +1802,7 @@ Overfull \hbox (9.31827pt too wide) in paragraph at lines 83--84
 [][] 
  []
 
-[38
+[40
 
  <./Figures/activityDiagram.pdf>]
 Overfull \hbox (2.49834pt too wide) in paragraph at lines 97--97
@@ -1823,7 +1823,7 @@ Overfull \hbox (16.8655pt too wide) in alignment at lines 90--156
 Underfull \vbox (badness 10000) detected at line 156
  []
 
-[39] [40] [41]) (./Chapters/MS1report.tex [42]
+[41] [42] [43]) (./Chapters/MS1report.tex [44]
 Appendix E.
 ------------------------------------------------------------------------------
  E MS1 meeting report
@@ -1833,9 +1833,9 @@ Overfull \hbox (28.86548pt too wide) in paragraph at lines 20--26
 [] 
  []
 
-[43
+[45
 
-]) (./Chapters/MS2report.tex [44]
+]) (./Chapters/MS2report.tex [46]
 Appendix F.
 ------------------------------------------------------------------------------
  F MS2 meeting report
@@ -1845,7 +1845,7 @@ Overfull \hbox (28.86548pt too wide) in paragraph at lines 20--26
 [] 
  []
 
-[45
+[47
 
 ]
 Overfull \hbox (157.91972pt too wide) in paragraph at lines 56--57
@@ -1853,7 +1853,7 @@ Overfull \hbox (157.91972pt too wide) in paragraph at lines 56--57
 i-2.6/org/apache/commons/lang/StringUtils.html 
  []
 
-) [46]
+) [48]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
@@ -1864,10 +1864,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DCD695450C2014A17F798C06B841054F;19332.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: AD252909432C9DFD4AC063DB9BA4CC2A;19620.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1875,30 +1872,33 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 23772 strings out of 494976
- 398434 string characters out of 6179137
- 482480 words of memory out of 5000000
- 26328 multiletter control sequences out of 15000+600000
- 14294 words of font info for 53 fonts, out of 8000000 for 9000
+ 23797 strings out of 494976
+ 398726 string characters out of 6179137
+ 482621 words of memory out of 5000000
+ 26339 multiletter control sequences out of 15000+600000
+ 16006 words of font info for 60 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,12n,59p,895b,1134s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,12n,59p,1251b,1134s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7
-.pfb>
-Output written on main.pdf (58 pages, 764628 bytes).
+s/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on main.pdf (60 pages, 813869 bytes).
 PDF statistics:
- 1032 PDF objects out of 1200 (max. 8388607)
- 945 compressed objects within 10 object streams
- 201 named destinations out of 1000 (max. 500000)
- 1001 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1085 PDF objects out of 1200 (max. 8388607)
+ 992 compressed objects within 10 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 1017 words of extra memory for PDF output out of 10000 (max. 10000000)
 
