@@ -1,0 +1,413 @@
+% Chapter Template
+
+
+
+\chapter{Planning} % Main chapter title
+
+\label{Planning} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Planning \emph{}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version & Date      & Change & Author \\ \hline
+    0.1     & 15.09.2014        & Setup document                                        & JR \\ \hline
+    1.0     & 28.09.2014        & Draft planning                                        & JR \\ \hline
+    1.1     & 18.09.2014        & Adding overview                                       & JR \\ \hline
+    1.2     & 6.10.2014        & Stories for MS2                                       & JR \\ \hline
+
+\end{tabular}
+
+\section{Planning concept}
+
+So as to plan the project, a combination of the two well known planning frameworks scrum and RUP are used.\\
+For a first rough planning, the assignment is split into working packages and assigned to milestones. Delivery objects are defined for each milestone.\\
+This plan is then assigned to the given time table of about 12 weeks. The project effort is defined as 180 hours. This results in about 15 hours work load per week.
+
+A more detailed planning is done for the incoming milestone / sprint. The predefined working packages are split into smaller packages. For the first draft, only the first milestone is split into smaller packages. The later milestones are going to be defined in more detail as soon as all needed information is available. 
+
+The effort needed for the documentation is not listed separately. All the tasks already contain additional time for updating the documentation.
+
+The milestones dates are not finally defined, which means that the meeting dates can vary by up to some days. sadfjsalödkfjsadlk
+
+\section{Milestones overview}
+
+	\begin{tabular}{ | p{3cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} |}
+	\hline
+	\textbf{Name} & \textbf{Shortcut} & \textbf{Weeks} & \textbf{Estimated hours} & \textbf{Hours  \mbox{total}} & \textbf{Closing date} \\ \hline
+	Milestone one & m1 & 2.5 & 39 & 39 & 01.10.2014 \\
+	Milestone two & m2 & 3 & 45 & 84 & 22.10.2014 \\
+	Milestone three & m3 & 2 & 30 & 114 & 05.11.2014 \\
+	Milestone four & m4 & 2 & 30 & 144 & 19.11.2014 \\
+	Milestone five & m5 & 2.5 & 38 & 182 & 08.12.2014 \\
+	\hline
+	\end{tabular}
+
+
+\section{Delivery objects}
+
+    \begin{tabular}{ | p{2.5cm} | p{2.5cm} | p{9cm} |}
+    \hline
+    \textbf{Milestone} & \textbf{Delivery date} & \textbf{Delivery objects}\\ \hline
+    Milestone one & 01.10.2014 &
+        \begin{itemize}
+        \item System specification
+        \item Sketch software architecture
+        \item Short presentation CI environment
+        \item Draft risk evaluation
+        \end{itemize}\\
+    \hline
+        Milestone two & 22.10.2014 &
+        \begin{itemize}
+        \item Elaborated software architecture
+        \item Tested code of test framework (tbd: which components)
+        \item Interface definition for justext/boilerplate components
+        \item HTML test data
+        \end{itemize}\\
+    \hline
+        Milestone three & 05.11.2014 &
+        \begin{itemize}
+        \item Working test environment with both justext and boilerplate components integrated
+        \end{itemize}\\
+    \hline
+        Milestone four & 19.11.2014 &
+        \begin{itemize}
+        \item Evaluation environment for output data of test framework
+        \item First approach to new algorithm
+        \end{itemize}\\
+    \hline
+        Milestone five & 08.12.2014 &
+        \begin{itemize}
+        \item Implementation of new algorithm
+        \item Final documentation
+        \item Final presentation
+        \end{itemize}\\
+    \hline
+    \end{tabular}
+
+
+\section{Milestone one - m1}
+
+\begin{itemize}
+\item Closing date date: 1.10.2014
+\item Available time: ca. 39h
+\end{itemize}
+
+    \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
+    \hline
+    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Planning & s1 &4h \\
+    Research HTML / Algorithms & s2 & 8h \\
+    System specification & s3 & 12h \\
+    Risk evaluation & s4 & 3h\\
+    Draft software architecture & s5 & 8h \\ 
+    Configuration CI environment & s6 & 4h \\ \hline
+    Total & & 39h\\
+    \hline
+    \end{tabular}
+
+\subsection {Stories m1}
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Planning\\ \hline
+    \textbf{Id} & s0\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} &  As a project owner, you need to have a time schedule so that you can see when you will achieve which results. The PAWI project is split into several working packages which are then split into single stories. The working packages are assignment to milestones and for each milestone, delivery objects are defined. This can be a document, a piece of test or production code or some other kind of work.\\
+    \hline
+    \end{tabular} \\\\
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Research HTML / Algorithms\\ \hline
+    \textbf{Id} & s1\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} & My knowledge of HTML and content extraction algorithms is still limited. In order to find out what challenges I will face and which aspects I will have to take into consideration for performing the first tasks, a short research on these topics is needed.\\
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & System specification\\ \hline
+    \textbf{Id} & s2\\ \hline
+    \textbf{Estimated time} & 12h \\ \hline
+    \textbf{Description} & The PAWI project is defined through a short project description. This description does not cover all necessary information to both plan and perform this project. The key features, interfaces and delivered objects have to be defined more closely. The system specification should cover all these requirements.\\
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Draft software architecture\\ \hline
+    \textbf{Id} & s3\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} & A first rough software architecture should be made as soon as possible, so that any misunderstandings between tutors and student can be uncovered. Moreover, it is much easier to plan the further steps when the software is split into several parts.\\
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Risk evaluation\\ \hline
+    \textbf{Id} & s4\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} & Potential risks should be uncovered with the knowledge that was gathered by defining the specification and the software architecture. What is more, further actions can be defined to minimize the above mentioned risks.\\
+    \hline
+    \end{tabular}
+    
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Configuration CI environment\\ \hline
+    \textbf{Id} & s5\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} & To deliver high quality software a continuous integration environment is required. Following tools should be evaluated and configured for further use:
+    \begin{itemize}
+        \item Version control (git)
+        \item Project build automation tool (gradle)
+        \item continuous integration service (Travis CI)
+    \end{itemize}
+    \\
+    \hline
+    \end{tabular}
+
+
+\section{Milestone two - m2}
+
+\begin{itemize}
+\item Closing date date: 22.10.2014
+\item Available time: ca. 45h
+\end{itemize}
+
+    \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
+    \hline
+    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Implementation test framework & s6 & 20h \\
+    Prototype Integration of justext/boilerpipe & s7 & 17h \\
+    Collection of test data & s8 & 8h \\ \hline
+    Total &  & 45h\\
+    \hline
+    \end{tabular}
+
+
+\subsection {Stories m2}
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation Config Reader \\ \hline
+    \textbf{Id} & s6\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} & The configuration for the test framework is located in a text file in the resources folder of the project. The data is formated  in a key value structure. This text file is read at the startup of the program and saved in a Config object.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation File Reader \\ \hline
+    \textbf{Id} & s7\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} & The html and content files are located in two folders (content/html) in the resources folder of the project.. For each file pair with the same name, a test object is generated and the content of the file is read and put into the test objects.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+        \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation File Writer \\ \hline
+    \textbf{Id} & s8\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} & The results of a test is written in an output text file into the resources folder of the project.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+            \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation Test Manager \\ \hline
+    \textbf{Id} & s9\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} & The Test Manager contains the business logic of the program and coordinates the reading, testing and writing.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prototype Integration of boilerpipe\\ \hline
+    \textbf{Id} & s10\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} &  Implementation of a small prototype which uses the existing implementation of boilerpipe. A final interface for boilerpipe is defined for further use.\\ 
+    \hline
+    \end{tabular} \\\\
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prototype Integration of justext\\ \hline
+    \textbf{Id} & s11 \\ \hline
+    \textbf{Estimated time} & 12h \\ \hline
+    \textbf{Description} &  Implementation of a small prototype which uses the existing implementation of justext. A final interface for justext is defined for further use. \\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Collection of test data\\ \hline
+    \textbf{Id} & s12\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} &  To evaluate the functionality of the text extraction algorithms, a certain amount of test data is needed. This test data contains HTML files of several web pages. The HTML code is categorized into content and boilerplate.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+
+
+\section{Milestone three - m3}
+
+\begin{itemize}
+\item Closing date date: 5.11.2014
+\item Available time: ca. 30
+\end{itemize}
+
+    \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
+    \hline
+    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Implementation test framework & s9 & 20h \\
+    Final integration of justext / boilerplate & s10 & 10h \\ \hline
+    Total &  & 30h\\
+    \hline
+    \end{tabular}
+
+\subsection {Stories m3}
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation test framework \\ \hline
+    \textbf{Id} & s9\\ \hline
+    \textbf{Estimated time} & 20h \\ \hline
+    \textbf{Description} & Final implementation of the test framework. 
+    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prototype Integration of justext/boilerpipe\\ \hline
+    \textbf{Id} & s10\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} &  Complete integration of the justext and boilerplate algorithms into the test framework. 
+    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+
+
+
+\section{Milestone four - m4}
+
+\begin{itemize}
+\item Closing date date: 19.11.2014
+\item Available time: ca. 30h
+\end{itemize}
+
+    \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
+    \hline
+    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Evaluation environment for results & s11 &20h \\
+    Research on new algorithm & s12 &10h \\ \hline
+    Total &  & 30h\\
+
+    \hline
+    \end{tabular}
+
+\subsection {Stories m4}
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Evaluation environment of results\\ \hline
+    \textbf{Id} & s11\\ \hline
+    \textbf{Estimated time} & 20h \\ \hline
+    \textbf{Description} &  The test framework will produce a lot of output data, which has to be reviewed using an evaluation environment. This should process this data and present the results in a descriptive way.
+    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \hline
+    \end{tabular} \\\\
+
+        \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Research on new algorithm\\ \hline
+    \textbf{Id} & s12\\ \hline
+    \textbf{Estimated time} & 20h \\ \hline
+    \textbf{Description} &  A first research on the new algorithm should be performed. After this research it should be possible to decide if this solution is possible and if an implementation with the remaining time resources is realistic.
+    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+\section{Milestone five - m5}
+
+\begin{itemize}
+\item Closing date date: 8.12.2014
+\item Available time: ca. 38h
+\end{itemize}
+
+    \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
+    \hline
+    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Implementation of new algorithm & s13 & 19h \\
+    Complete documentation & s14 & 15h \\
+    Prepare final presentation & s15 & 4h \\ \hline
+    Total &  & 38h\\
+    \hline
+    \end{tabular}
+
+\subsection {Stories m5}
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Implementation of new algorithm\\ \hline
+    \textbf{Id} & s13\\ \hline
+    \textbf{Estimated time} & 19h \\ \hline
+    \textbf{Description} &  Implementation of the new algorithm and analysis of the test results with the existing evaluation environment. \\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Complete documentation\\ \hline
+    \textbf{Id} & s14\\ \hline
+    \textbf{Estimated time} & 15h \\ \hline
+    \textbf{Description} &  Complete and review all chapters of the documentation.  \\ 
+    \hline
+    \end{tabular} \\\\
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Prepare final presentation\\ \hline
+    \textbf{Id} & s15\\ \hline
+    \textbf{Estimated time} & 4h \\ \hline
+    \textbf{Description} &  Prepare the final presentation and the final printed / digital version of the thesis.  \\ 
+    \hline
+    \end{tabular} \\\\
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+% Chapter 4
+
+\chapter{Introduction} % Main chapter title
+
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Chapter 1. \emph{Introduction}} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Layzapp}
+
+Layzapp ist eine second screen app. Unser Anspruch ist es, den Benutzer mit möglichst relevanten Informationen zur laufenden Sendung zu versorgen. Um dies zu ermöglichen bezieht Layzapp Content von diversen Anbietern und crawlt auch selbst Websites. Ein grosses Problem bei der Verarbeitung von Websites ist zu unterscheiden was effektive Inhalte sind (Nutzdaten) und was ignoriert werden sollte (Boilerplate  wie z.B.: Navigation, Index Seiten, Login Seiten, Kommentarsektionen, etc). Durch das Entfernen des HTML Codes wird zwar die Entropie verringert. Jedoch bleiben Navigationselemente oder auch z.B die Beschreibung weiterführender Artikel bestehen, was schlussendlich die Suchergebnisse verfälscht. Daher ist die Text Extraction ein zentrales Problem im modernen Information Retrieval.
+
+
+\section{Problem}
+
+In der Regel bestehen Webseiten nicht nur aus den zentralen Informationen, wie Texten, Bildern oder Videos, sondern auch aus Navigationselementen, Templates, Werbung oder Beschreibungen weiterführender Artikeln (auch Boilerplate genannt). Einerseits wird für Mobilgeräte aufgrund der kleinen Bildschirme versucht die Informationen möglichst isoliert anzuzeigen, andererseits haben die Boilerplates in der Regel keinerlei Zusammenhang mit den Informationen auf der Seite. Um eine korrekte Indexierung für Suchmaschinen zu erreichen, müssen die Boilerplates entfernt werden. Aufgrund der vielen verschieden Websites im Internet ist es nicht möglich eine einfache allgemeine Regel zur Extraktion von Information aufzustellen die für alle Websites zufriedenstellend funktioniert. 
+In der Forschung wurden bereits einige Versuche zur Text Extraction gemacht. Auf der einen Seite stehen Algorithmen die mit visuellen Methoden arbeiten. Der grosse Nachteil ist dass man jede Seite jeweils rendern muss, um sie überhaupt zu verarbeiten, was rechenintensiv ist. Auf der anderen Seite stehen Algorithmen, welche auf dem Document Object Model 
+(DOM) operieren. Diese Algorithmen haben den Vorteil, dass Sie in oftmals regelbasiert sind (Decision Tree) und daher sehr schnell zu einem Resultat kommen. Deshalb werden wir uns auf die regelbasierten Algorithmen konzentrieren.
+Man kann sich leicht vorstellen, dass alle DOM-Algorithmen ihre Vor- und Nachteile haben. Daher ist es sehr spannend herauszufinden, welche Algorithmen bei welchen Seiten (und weshalb) keine zufriedenstellenden Ergebnisse liefern. Aus diesem Grund möchten wir eine Testumgebung aufbauen um zwei bereits bekannte Algorithmen messbar miteinander zu vergleichen. Ausserdem haben wir bereits Ideen für neue Algorithmen entwickelt, von welchen in dieser Arbeit einer ausgearbeitet und implementiert werden soll.
+Um schlussendlich die drei Algorithmen miteinander vergleichen zu können wird eine Sammlung von Testdaten benötigt, bei welchen wir bereits wissen welche Teile aus der HTML Struktur für uns interessant sind. Damit lässt sich messen, wie nahe ein Algorithmus an die erwartete Ausgabe heran kommt. Die Sammlung sollte optimalerweise repräsentativ sein. 

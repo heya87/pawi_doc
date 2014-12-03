@@ -1,0 +1,6 @@
+file name | chars HTML | chars text | algo 1  | a1: TN | a1 FP | algo 2      | a2 TN | a2 FP | 
+t1        | 1000       | 100  	    | justext | 10     | 10    | boilerplate | 100   | 100   | 
+t2        | 2000       | 200  	    | justext | 20     | 20    | boilerplate | 200   | 200   | 
+t3        | 3000       | 300  	    | justext | 30     | 30    | boilerplate | 300   | 300   | 
+t4        | 4000       | 400  	    | justext | 40     | 40    | boilerplate | 400   | 400   | 
+t5        | 5000       | 500  	    | justext | 50     | 50    | boilerplate | 500   | 500   | 
