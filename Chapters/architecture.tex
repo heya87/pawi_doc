@@ -32,13 +32,15 @@ The context extraction test framework will perform automated text extraction on 
 
 \section{Logical view}
 
+This section describes how the system is structured in terms of units of implementation.
+
 \subsection{Approach}
 This section describes the approach for elaborating the software architecture. 
 The following figure from the software requirement specification is the basis for elaborating the software architecture.
 
 %\begin{landscape}
 
-\includegraphics[width=15cm]{Figures/App_overview.pdf}
+\includegraphics[width=15cm]{Figures/AppOverview.pdf}
 
 %\end{landscape}
 
@@ -78,11 +80,10 @@ The following diagram shows the business logic of the application. The diagram d
 
 \includegraphics[width=23cm]{Figures/architecutre.pdf}
 
+
 \end{landscape}
 
-\includegraphics[width=15cm]{Figures/activityDiagram.pdf}
 
-The data model is passed through the business logic and is enriched with data during the test procedure. First the input directories are checked for files by the FileObserver and TestCases are generated for each file pair with the same name. Then all the TestCases are then handed over to the ExtractorManager. The ExtractorManager extracts each TestCase with all available implementations of IExtractor and puts the Results into ExtractionResults. After that, all the TestCases are handed over to the Analyzer which runs each implementation of IAnalyzer. Each IAnalyzer produces at least one Result and puts it into the TestCase. To simplify the diagram, only two Analyzers are drawn. After generating some Results, the Formatter serializes the Result Objects into a String as a CSV table and the WriterWrapper persists the CSV data into an output file.
 
 \pagebreak
 \subsection{Description of single classes}
@@ -156,6 +157,15 @@ The ConfigReader class reads the config.txt file and puts the key value pairs in
 \end{longtable}
 
 
+\section{Process view}
+
+This section describes the dynamic aspects of the application.
+
+\includegraphics[width=15cm]{Figures/activityDiagram.pdf}
+
+The data model is passed through the business logic and is enriched with data during the test procedure. First the input directories are checked for files by the FileObserver and TestCases are generated for each file pair with the same name. Then all the TestCases are then handed over to the ExtractorManager. The ExtractorManager extracts each TestCase with all available implementations of IExtractor and puts the Results into ExtractionResults. After that, all the TestCases are handed over to the Analyzer which runs each implementation of IAnalyzer. Each IAnalyzer produces at least one Result and puts it into the TestCase. To simplify the diagram, only two Analyzers are drawn. After generating some Results, the Formatter serializes the Result Objects into a String as a CSV table and the WriterWrapper persists the CSV data into an output file.
+
+
 \section{Development view}
 
 This chapter describes the used frameworks and tools which are used during the development process.
@@ -197,6 +207,8 @@ This command extracts the HTMl file page.html into a text file called cleaned-pa
 An implementation of the Boilerpipe Algorithm is available in Java. The resources are available under following link \url{https://code.google.com/p/boilerpipe/}. This algorithm can be used out of the box with calls against the Java API.
 
 
-\section{Process view}
-
 \section{Physical view}
+
+Following diagram shows the physical view of the application. The application is running on a single device, which results in a very simple diagram. The external components are the Boilerpipe algorithm implemented in Java and the Justext algorithm implemented in Python. The python program is called with system calls. All the components are located on the same device.
+
+\includegraphics[width=10cm]{Figures/deploymentDiagram.pdf}

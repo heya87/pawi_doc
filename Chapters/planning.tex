@@ -21,20 +21,22 @@
     1.0     & 28.09.2014        & Draft planning                                        & JR \\ \hline
     1.1     & 18.09.2014        & Adding overview                                       & JR \\ \hline
     1.2     & 6.10.2014        & Stories for MS2                                       & JR \\ \hline
+    1.3     & 23.10.2014        & Stories for MS3                                      & JR \\ \hline
+    1.4     & 7.11.2014        & Stories for MS4                                       & JR \\ \hline
+    1.5     & 20.10.2014        & Stories for MS5                                       & JR \\ \hline
+    2       & 8.12.2014        & Adding time tracking / adaption for final version     & JR \\ \hline
+
 
 \end{tabular}
 
 \section{Planning concept}
 
-So as to plan the project, a combination of the two well known planning frameworks scrum and RUP are used.\\
+So as to plan the project, the planning frameworks scrum was used.\\
 For a first rough planning, the assignment is split into working packages and assigned to milestones. Delivery objects are defined for each milestone.\\
 This plan is then assigned to the given time table of about 12 weeks. The project effort is defined as 180 hours. This results in about 15 hours work load per week.
 
-A more detailed planning is done for the incoming milestone / sprint. The predefined working packages are split into smaller packages. For the first draft, only the first milestone is split into smaller packages. The later milestones are going to be defined in more detail as soon as all needed information is available. 
-
-The effort needed for the documentation is not listed separately. All the tasks already contain additional time for updating the documentation.
-
-The milestones dates are not finally defined, which means that the meeting dates can vary by up to some days. sadfjsalödkfjsadlk
+As working with Scrum, each milestone was defined as a sprint. At each start of a sprint, the working packages were adjusted if needed and were then spitted into stories. In the following section all the milestones are listed with its working packages and stories. The working packages were defined at the very beginning of the project and the stories were defined at the start of each milestone/sprint. To see the adjustments made during the project, the definition of the working packages was not adapted for this final documentation.
+ 
 
 \section{Milestones overview}
 
@@ -101,7 +103,7 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
     \hline
-    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    \textbf{Working package} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
     Planning & s1 &4h \\
     Research HTML / Algorithms & s2 & 8h \\
     System specification & s3 & 12h \\
@@ -188,7 +190,7 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
     \hline
-    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    \textbf{Working package} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
     Implementation test framework & s6 & 20h \\
     Prototype Integration of justext/boilerpipe & s7 & 17h \\
     Collection of test data & s8 & 8h \\ \hline
@@ -280,8 +282,8 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
     \hline
-    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
-    Implementation test framework & s9 & 20h \\
+    \textbf{Working package} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    Implementation test framework & s13 & 20h \\
     Final integration of justext / boilerplate & s10 & 10h \\ \hline
     Total &  & 30h\\
     \hline
@@ -291,22 +293,30 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Implementation test framework \\ \hline
-    \textbf{Id} & s9\\ \hline
-    \textbf{Estimated time} & 20h \\ \hline
-    \textbf{Description} & Final implementation of the test framework. 
-    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Title} & Implementation text comparator analyzer \\ \hline
+    \textbf{Id} & s13\\ \hline
+    \textbf{Estimated time} & 12h \\ \hline
+    \textbf{Description} & Implement the analyzer component. The content text and the extracted text by an algorithm needs to be compared and the values TP, FP, TN, FN need to be calculated.\\ 
     \hline
     \end{tabular} \\\\
 
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Prototype Integration of justext/boilerpipe\\ \hline
-    \textbf{Id} & s10\\ \hline
-    \textbf{Estimated time} & 4h \\ \hline
-    \textbf{Description} &  Complete integration of the justext and boilerplate algorithms into the test framework. 
-    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Title} & Implementation math analysis \\ \hline
+    \textbf{Id} & s14\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} & After getting the values for TP, FP, TN, FN further values need to be calculated. These values are Precision, Recall, F-Measure and Fallout.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Final implementation of justext and boilerpipe\\ \hline
+    \textbf{Id} & s15\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} &  After implementing prototypes for both Justext and boilerpipe, they need to be implementend in the main application so that test cases can be extracted by the algorithms.\\ 
     \hline
     \end{tabular} \\\\
 
@@ -323,7 +333,7 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
     \hline
-    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    \textbf{Working package} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
     Evaluation environment for results & s11 &20h \\
     Research on new algorithm & s12 &10h \\ \hline
     Total &  & 30h\\
@@ -335,21 +345,38 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Evaluation environment of results\\ \hline
-    \textbf{Id} & s11\\ \hline
-    \textbf{Estimated time} & 20h \\ \hline
-    \textbf{Description} &  The test framework will produce a lot of output data, which has to be reviewed using an evaluation environment. This should process this data and present the results in a descriptive way.
-    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Title} & Evaluation of results\\ \hline
+    \textbf{Id} & s16\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} &  The test framework does produce a lot of output data. To investigate the results more closely, the data needs to put into some form that specific information can be extracted from it. To do so, an excel sheet is needed, where the output data from the test framework can be imported into excel with ease.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+        \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Improve the text analysis\\ \hline
+    \textbf{Id} & s17\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} &  Right now the text analysis is not very precise. Mr. Kaufmann suggested to use a diff tool to compare the text files with each other. So a diff library needs to be found, tested and integrated into the existing application.\\ 
+    \hline
+    \end{tabular} \\\\
+
+        \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Add a test case filter\\ \hline
+    \textbf{Id} & s18\\ \hline
+    \textbf{Estimated time} & 8h \\ \hline
+    \textbf{Description} &  Investigating a specific test is not possible yet. To do so some kind of filter is needed. It should be possible to set a test case for inspection in the config file and as a result, an extra output file with information about this test case should be generated.\\ 
     \hline
     \end{tabular} \\\\
 
         \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
     \textbf{Title} & Research on new algorithm\\ \hline
-    \textbf{Id} & s12\\ \hline
+    \textbf{Id} & s19\\ \hline
     \textbf{Estimated time} & 20h \\ \hline
-    \textbf{Description} &  A first research on the new algorithm should be performed. After this research it should be possible to decide if this solution is possible and if an implementation with the remaining time resources is realistic.
-    This story will be divided into smaller stories as soon as the software architecture and the system specification is reviewed.\\ 
+    \textbf{Description} &  A short research should be done on the idea of the RSS algorithm. Based on this research it should be possible to decide, if we are going to implement it or not.\\ 
     \hline
     \end{tabular} \\\\
 
@@ -363,9 +390,9 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{10cm} | p{2cm} | p{2cm} |}
     \hline
-    \textbf{Story} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
+    \textbf{Working package} & \textbf{Shortcut}& \textbf{Estimated time} \\ \hline
     Implementation of new algorithm & s13 & 19h \\
-    Complete documentation & s14 & 15h \\
+    Complete documentation & s15 & 15h \\
     Prepare final presentation & s15 & 4h \\ \hline
     Total &  & 38h\\
     \hline
@@ -375,10 +402,29 @@ The milestones dates are not finally defined, which means that the meeting dates
 
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
-    \textbf{Title} & Implementation of new algorithm\\ \hline
-    \textbf{Id} & s13\\ \hline
-    \textbf{Estimated time} & 19h \\ \hline
-    \textbf{Description} &  Implementation of the new algorithm and analysis of the test results with the existing evaluation environment. \\ 
+    \textbf{Title} & Adapt the Justext algorithm for block extraction\\ \hline
+    \textbf{Id} & s20\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} &  Right now only the calculated values for True Positive, Precision, etc. are available in the detailed result report. To investigate the results more closely, more information is needed which is the classification from the algorithms for the single HTML blocks. To do so, the Justext algorithm needs to be adjusted so that it is possible to get the classification information for each HTML block.\\ 
+    \hline
+    \end{tabular} \\\\
+
+    \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Adapt the Boilerpipe algorithm for block extraction\\ \hline
+    \textbf{Id} & s21\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} &  Right now only the calculated values for True Positive, Precision, etc. are available in the detailed result report. To investigate the results more closely, more information is needed which is the classification from the algorithms for the single HTML blocks. To do so, the Boilerpipe algorithm needs to be adjusted so that it is possible to get the classification information for each HTML block.\\ 
+    \hline
+    \end{tabular} \\\\
+
+
+     \begin{tabular}{ | p{4cm} | p{10cm} |}
+    \hline
+    \textbf{Title} & Integrate the adapted algorithms accordingly into the main application\\ \hline
+    \textbf{Id} & s22\\ \hline
+    \textbf{Estimated time} & 6h \\ \hline
+    \textbf{Description} &  After adapting the algorithms that it is possible to extract the block classification information, the main application needs to be adapted that it can handle the block information and put it into the output file when needed.\\ 
     \hline
     \end{tabular} \\\\
 
@@ -386,7 +432,7 @@ The milestones dates are not finally defined, which means that the meeting dates
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
     \textbf{Title} & Complete documentation\\ \hline
-    \textbf{Id} & s14\\ \hline
+    \textbf{Id} & s23\\ \hline
     \textbf{Estimated time} & 15h \\ \hline
     \textbf{Description} &  Complete and review all chapters of the documentation.  \\ 
     \hline
@@ -395,22 +441,23 @@ The milestones dates are not finally defined, which means that the meeting dates
     \begin{tabular}{ | p{4cm} | p{10cm} |}
     \hline
     \textbf{Title} & Prepare final presentation\\ \hline
-    \textbf{Id} & s15\\ \hline
+    \textbf{Id} & s24\\ \hline
     \textbf{Estimated time} & 4h \\ \hline
     \textbf{Description} &  Prepare the final presentation and the final printed / digital version of the thesis.  \\ 
     \hline
     \end{tabular} \\\\
 
 
+
+
+
 \section{Time tracking}
     \label{sec:Time tracking}
 
+To keep track of the time, the tool toggl was used. Toggl is an easy to use time tracking tool. In following table, all the performed tasks and the needed time are listed.
 
 
 
-
-
-
-
+TODO: put table here
 
 

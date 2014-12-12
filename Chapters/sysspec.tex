@@ -82,7 +82,7 @@ The operation environment for the text extraction framework is defined in this s
 \subsection{Design and Implementation Constraints}
 
 \subsubsection{User interface}
-As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed.
+As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed. \cite{Reference1} \cite{CLEANEVAL:online}
 
 
 \section{System Features}
@@ -96,7 +96,7 @@ This section specifies all system features. Each feature is specified more close
 \subsection{Basic functionality}
 The following diagram and text describes the basic functionality of the application.
 
-\includegraphics[width=24cm]{Figures/App_overview.pdf}
+\includegraphics[width=24cm]{Figures/AppOverview.pdf}
 
 There are two folders defined by the configuration file (config.txt). The HTML folder contains  HTML files of web pages. The content folder contains text files with the relevant content of the related HTML files. As soon as a test is started, the HTML file and the text file are read and the HTML file is extracted and classified with all the available algorithms. The result of the classification is then compared to the relevant content and performance data is generated. This performance data is then analyzed with statistical methods. 
 
@@ -138,7 +138,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 						        \end{itemize} 
 						        The configuration file location is defined as a relative path to the source directory and structured in a key value list: 
 
-						        \lstinputlisting{Code/config_template.txt} \\ \hline
+						        \lstinputlisting{Code/configTemplate.txt} \\ \hline
 	\textbf{Relevance} 			& needed 			\\ \hline
 	\textbf{Related stories} 	& tbd		\\ \hline
 	\end{tabular} \\
@@ -219,7 +219,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Evaluation of classification blocks \\ \hline
-	\textbf{Feature id} 		& f6 \\ \hline
+	\textbf{Feature id} 		& f7 \\ \hline
 	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text but also each block of an HTML file is classified. So as to achieve the more detailed evaluation, the implementation of Justext and Boilerpiple has to be adapted so that they return classified blocks instead of the extracted text. These blocks are afterwards compared with the actual content and classified. 
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if its content can be found in the content file
@@ -242,7 +242,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Analyze data \\ \hline
-	\textbf{Feature id} 		& f7 \\ \hline
+	\textbf{Feature id} 		& f8 \\ \hline
 	\textbf{Description} 		&  From the results of the comparison further values can be evaluated for a better understanding of the results. These values are described in more detail in section \ref{subsec:Analytical values}.
 								    \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline

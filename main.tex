@@ -142,7 +142,7 @@ Date:\\
 
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla \ldots
+TBD \ldots
 }
 
 \clearpage % Start a new page
@@ -151,13 +151,13 @@ Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
 %	ACKNOWLEDGEMENTS
 %----------------------------------------------------------------------------------------
 
-\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+% \setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
 
-\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+% \acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla \ldots
-}
-\clearpage % Start a new page
+%  \ldots
+% }
+% \clearpage % Start a new page
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -186,6 +186,12 @@ Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
 \listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
 \textbf{HTML} & \textbf{H}yper \textbf{T}ext \textbf{M}arkup \textbf{L}anguage \\
+\textbf{BTE} & \textbf{B}ody \textbf{T}ext \textbf{E}xtraction \\
+\textbf{DOM} & \textbf{D}ocument \textbf{O}bject \textbf{M}odel \\
+\textbf{TP} & \textbf{T}rue \textbf{P}ositive \\
+\textbf{TN} & \textbf{T}rue \textbf{N}egative \\
+\textbf{FP} & \textbf{F}alse \textbf{P}ositive \\
+\textbf{FN} & \textbf{F}alse \textbf{N}egative \\
 %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 }
 
@@ -216,10 +222,7 @@ Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
 
 \input{Chapters/problemStatement}
 \input{Chapters/approach}
-\input{Chapters/results}
-\input{Chapters/LessonLearned}
-\input{Chapters/FurtherWork}
-
+\input{Chapters/Conclusion}
 %\input{Chapters/Chapter4} 
 %\input{Chapters/Chapter5} 
 %\input{Chapters/Chapter6} 
@@ -235,17 +238,28 @@ Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
-\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
-
+%\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
+
+\clearpage
+\appendix
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Appendices}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\pagenumbering{arabic}
+%\blinddocument
 
 \input{Chapters/planning}
 \input{Chapters/risk_analysis}
 \input{Chapters/sysspec}
 \input{Chapters/architecture}
+\input{Chapters/testplan}
+\input{Chapters/testprotocol}
+\input{Chapters/usermanual}
 \input{Chapters/MS1report}
 \input{Chapters/MS2report}
+\input{Chapters/MS4report}
 %\input{Appendices/AppendixB}
 %\input{Appendices/AppendixC}
 
@@ -259,10 +273,14 @@ Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla 
 
 \label{Bibliography}
 
+\cite{Reference1}
+
 \lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
 
 \bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+
 
 \end{document}  

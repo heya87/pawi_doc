@@ -1,0 +1,152 @@
+% Chapter 2
+
+\chapter{Test plan} % Main chapter title
+
+\label{Test plan} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{Test plan} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+
+\subsection{Test concept}
+
+The project was tested on two levels. The first level is Unit Testing in Java. This tests are not documented in the report itself. Since the project was developed in a continuous integration environment, all unit tests were run after committing any changes to the git repository. If any test did not pass, the build would fail. With this functionality, the most important and critical functions of the functionalities are already covered. The continuous integration environment is described in the system requirement specification (\ref{Software Requirement Specification}). \linebreak 
+However the second level are test cases which are defined against the software requirement specification and are performed as blackbox test.  To do so, test cases were defined so they cover all the features defined in the software requirement specification. 
+
+\subsection{Test cases}
+
+This section contains all test cases which cover the features described in the software requirement specification. The results of the single test runs can be found in the test protocol (\ref{Test protocol}).
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					& Test case handling 	\\ 	\hline
+	\textbf{Test case id} 			& tc1 					\\ 	\hline
+	\textbf{Description} 			& Create 10 tests and check the detailed output file for the right amount of tests. 	\\ 	\hline
+	\textbf{Related features}		& f2		\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Put ten text files into the content input folder.}
+											\item{Put ten html files into the html input folder. They need to have the same name as the related content files.}
+											\item{Run the test}
+										\end{enumerate}
+										\\ 	\hline
+	\textbf{Preconditions} 			& At least one extractor needs to be activated in the config file.	\\ 	\hline
+	\textbf{Preconditions} 			& An output file \'output\_detailed.txt\' needs to be created. The text file needs to contain exactly ten result lines, for each 											test one line. The tests need to be named the same as the input files in the content resp. the html folder.	\\ 	\hline
+	\end{tabular} \\
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					& Config single test		\\ 	\hline
+	\textbf{Test case id} 			& tc2 						\\ 	\hline
+	\textbf{Related features}		& f1, f2						\\ 	\hline
+	\textbf{Description} 			& The detailed results for a single test need to be put into an extra output file when it is defined in the config file. \\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Add following line to the config file: "inspect:testToInspect" where testToInspect is a file name of any content/HTML file pair in the input folder. }
+											\item{Run the test}
+											\item{Check the outputfolder for following file: "result\_testToInspect.txt"}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc1 needs to be fulfilled							\\ 	\hline
+	\textbf{Acceptance criteria} 	& A file with the name "result\_testToInspect.txt" is present in the output folder. \\ 	\hline
+	\end{tabular} \\
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					&  Run the boilerpipe algorithm with the test framework\\ 	\hline
+	\textbf{Test case id} 			& tc3 						\\ 	\hline
+	\textbf{Related features}		& f4 						\\ 	\hline
+	\textbf{Description} 			& Check if the test framework is working with the boilerpipe algorithm.	\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Add any content/HTML file pair into the input folders.}
+											\item{Add following line into the config file: "extractor:boilerpipe"}
+											\item{Run the test}
+											\item{Check the output files for results produced for the boilerpipe extractor.}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc1/tc2 need to be fulfilled 							\\ 	\hline
+	\textbf{Acceptance criteria} 	& The outputfile output.txt needs to have results for the boilerpipe extractor.\\ 	\hline
+	\end{tabular} \\
+
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					&  Run the Justext algorithm with the test framework\\ 	\hline
+	\textbf{Test case id} 			& tc4 						\\ 	\hline
+	\textbf{Related features}		& f3						\\ 	\hline
+	\textbf{Description} 			& Check if the test framework is working with the Justext algorithm.	\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Add any content/HTML file pair into the input folders.}
+											\item{Add following line into the config file: "extractor:justext"}
+											\item{Run the test}
+											\item{Check the output files for results produced for the Justext extractor.}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc1/tc2 need to be fulfilled 							\\ 	\hline
+	\textbf{Acceptance criteria} 	& The output file output.txt needs to have results for the Justext extractor.\\ 	\hline
+	\end{tabular} \\
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					& Test analysis 		 		\\ 	\hline
+	\textbf{Test case id} 			& tc5 							\\ 	\hline
+	\textbf{Related features}		& f6, f8							\\ 	\hline
+	\textbf{Description} 			& Run a test with one test file and check the results (TP, TN, FP, FN). To do so, run a detailed test (needs to be defined in the config file) for the according test and check the results by hand. The contains the actual content file as well as the extracted files by the algorithms. This output file can be used to check the results. 	\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Put an HTML file into the HTML input folder.}
+											\item{Put an according content file into the content input folder.}
+											\item{Add following line into the config file: "inspect:testToInspect" where "testToInspect" accords to the name of the test files.}
+											\item{Run the test}
+											\item{Open the file results\_testToInspect.txt}
+											\item{Check the values for TP, TN, FP, FN by hand}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc2 needs to be fulfilled	\\ 	\hline
+	\textbf{Acceptance criteria} 	& The results in the output file for TP, TN, FP, FN need to be correct.						\\ 	\hline
+	\end{tabular} \\
+
+
+
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					& Evaluation of Precision, Recall, F-Measure, Fallout 		\\ 	\hline
+	\textbf{Test case id} 			& tc6 						\\ 	\hline
+	\textbf{Related features}		& f6, f8						\\ 	\hline
+	\textbf{Description} 			& Check the calculated values  Precision, Recall, F-Measure and Fallout for any test case.	\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Put any test file pair into the input folders.}
+											\item{Add following line into the config file: "inspect:testToInspect" where "testToInspect" accords to the name of the test files. }
+											\item{Open the file test\_testToInspect.txt.}
+											\item{Calculate the values for Precision, Recall, F-Measure and  Fallout from the TP, FP, TN, FN values and compare them with the values in the output file.}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc1, tc5							\\ 	\hline
+	\textbf{Acceptance criteria} 	& The values Precision, Recall, F-Measure and Fallout need to be calculated correctly.	\\ 	\hline
+	\end{tabular} \\
+
+
+
+
+	\begin{tabular}{ | p{3.5cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 					& Block data evaluation 		\\ 	\hline
+	\textbf{Test case id} 			& tc7						\\ 	\hline
+	\textbf{Related features}		& f7						\\ 	\hline
+	\textbf{Description} 			& Check that the detailed results contains the classification information from each algorithm.	\\ 	\hline
+	\textbf{Test steps} 			& 	\begin{enumerate}
+											\item{Put any test file pair into the input folders.}
+											\item{Add following line into the config file: "inspect:testToInspect" where "testToInspect" accords to the name of the test files. }
+											\item{Open the file test\_testToInspect.txt.}
+											\item{Check for the block information}
+										\end{enumerate}
+																\\ 	\hline
+	\textbf{Preconditions} 			& tc1, tc3, tc4				\\ 	\hline
+	\textbf{Acceptance criteria} 	& The detailed output file for one test needs to contain the classification information for each block the algorithms classified.	\\ 	\hline
+	\end{tabular} \\

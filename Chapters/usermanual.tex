@@ -1,0 +1,63 @@
+% Chapter 2
+
+\chapter{User manual} % Main chapter title
+
+\label{User manual} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\lhead{User manual} % This is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+
+\section{System requirements}
+
+To use the text extraction test framework, the system needs to fulfill following system requirements.
+
+\begin{tabular}{| p{2cm} | p{1.5cm} | p{9.5cm} |} 
+	\hline
+	\textbf{Software} & \textbf{Version} & \textbf{Source} \\ \hline
+	Ubuntu & 12.04 & \url{http://releases.ubuntu.com/12.04/} \\ \hline
+	git & 2.2.0 & \url{http://git-scm.com/download/linux} \\ \hline
+	python & 2.7.6 & \url{https://www.python.org/download/releases/2.7.6/} \\ \hline
+\end{tabular}
+
+
+\section{Installation}
+
+\subsection{}
+\begin{enumerate}
+
+\item Checkout the repository with git to your favorite directory.
+\begin{lstlisting}
+git clone https://github.com/heya87/pawiTwo
+\end{lstlisting}
+
+
+\item Use your favorite console application and navigate into the source directory of the checked out repository.
+
+\item Build the project with the gradle wrapper.
+\begin{lstlisting}
+./gradlew build
+\end{lstlisting}
+
+
+
+\item Put the test files you would like into the following folders
+
+\item Put the content files into following folder: ~/build/resources/main/content
+\item Put the HTML files into following folder: ~/build/resources/main/html
+\item Run the test with the gradle wrapper.
+
+\begin{lstlisting}
+./gradlew build
+\end{lstlisting}
+\item Find the results in the output folder: ~/build/resources/main/
+
+
+\end{enumerate}
+
+
+\section{Usage \& Configuration}
+
