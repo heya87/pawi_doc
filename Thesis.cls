@@ -181,11 +181,11 @@
 %	defined as \examname above so you cite it as \examname
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Evaluation of different content extraction algorithms} % Your thesis title - this is used in the title and abstract
+\thesistitle{Evaluation of Different Content Extraction Algorithms} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Dr. M. Kaufmann / Patrick Huber / Patrik Lengacher} % You supervisor's name - this is used in the title page
+\supervisor{Patrick Huber \linebreak Patrik Lengacher \linebreak Dr. M. Kaufmann} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
-\examiner{Dr. M. Kaufmann} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
+\examiner{Prof. M. Jud} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
 \degree{Bachelor of Informatics} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   

@@ -111,7 +111,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{ID}	& \textbf{Name} 									& \textbf{Chapter}    											& \textbf{Relevance}	\\ \hline
 	f1  		& Read configuration 								& \ref{subsec:Read configuration}  								& needed 				\\ \hline
 	f2  		& Create test 										& \ref{subsec:Create test}										& needed 				\\ \hline
-	f3  		& Integration Justext algorithm 					& \ref{subsec:Integration Justext algorithm} 					& needed 				\\ \hline
+	f3  		& Integration JusText algorithm 					& \ref{subsec:Integration JusText algorithm} 					& needed 				\\ \hline
 	f4  		& Integration Boilerpipe algorithm 					& \ref{subsec:Integration Boilerpipe algorithm}  				& needed 				\\ \hline
 	f5  		& Evaluation and Implementation RSS feed algorithm 	& \ref{subsec:Evaluation and Implementation RSS feed algorithm} & nice to have			\\ \hline
 	f6  		& Evaluation of classification text 				& \ref{subsec:Evaluation of classification text}				& needed 				\\ \hline
@@ -155,14 +155,14 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
-\subsubsection{Integration Justext algorithm}
-\label{subsec:Integration Justext algorithm}
+\subsubsection{Integration JusText algorithm}
+\label{subsec:Integration JusText algorithm}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
-	\textbf{Name} 				& Integration Justext algorithm \\ \hline
+	\textbf{Name} 				& Integration JusText algorithm \\ \hline
 	\textbf{Feature id} 		& f3 \\ \hline
-	\textbf{Description} 		& Justext is implemented in python. That is the reason why a service is needed to call the python script and get the extracted text or the extracted blocks.\\ \hline
+	\textbf{Description} 		& JusText is implemented in python. That is the reason why a service is needed to call the python script and get the extracted text or the extracted blocks.\\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
@@ -220,7 +220,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\hline
 	\textbf{Name} 				& Evaluation of classification blocks \\ \hline
 	\textbf{Feature id} 		& f7 \\ \hline
-	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text but also each block of an HTML file is classified. So as to achieve the more detailed evaluation, the implementation of Justext and Boilerpiple has to be adapted so that they return classified blocks instead of the extracted text. These blocks are afterwards compared with the actual content and classified. 
+	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text but also each block of an HTML file is classified. So as to achieve the more detailed evaluation, the implementation of JusText and Boilerpiple has to be adapted so that they return classified blocks instead of the extracted text. These blocks are afterwards compared with the actual content and classified. 
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if its content can be found in the content file
 							        \item Categorize all blocks as boilerplate or content
@@ -283,30 +283,30 @@ When the results are compared based on HTML blocks, the expressions are interpre
 \end{tabular}
 \end{table}
 
-In conclusion, TP + FN is the correct outcome of the algorithm i.e. content classified as content and boilerplate as boilerplate. On the other hand, TN + FP is the wrong outcome of the algorithm i.e. content classified as boilerplate and boilerplate as content.
+In conclusion, TP and FN is the correct outcome of the algorithm i.e. content classified as content and boilerplate as boilerplate. On the other hand, TN and FP is the wrong outcome of the algorithm i.e. content classified as boilerplate and boilerplate as content.
 
 
 
 \subsection{Analytical values}
 \label{subsec:Analytical values}
 
-In this paragraph we use the notion of objects instead of word/block.
+In this paragraph we use the notion of instance instead of word/block.
 The results of the comparison deliver basic characteristics which can be used to calculate statistical values which help you analyze the test outcome.
 										
 \textbf{ Sensitivity / Recall /True positive rate / TPR / Hitrate }
 
-Recall is the probability that a relevant document is retrieved in a search which in our case is
+Recall is the probability that content is actually classified as content which in our case is
 
 \begin{equation}
  Recall =\frac{TP}{TP + FN}
 \end{equation}
 
-correct classified content objects divided by the sum of all actual objects.
+correct classified content objects divided by correct classified objects.
 
 \textbf{Precision / True negative rate / TNR} 
 
 
-Precision is the probability that a retrieved document is relevant which in our case is
+Precision is the probability the as content classified objects are actually content which in our case is
 
 \begin{equation}
  Presicion = \frac{TP}{TP + FP}
@@ -348,8 +348,8 @@ Fallout = \frac{FP}{FP + TN}
 The boilerpipe algorithm is implemented in Java and the documentation is found under
 \url{https://code.google.com/p/boilerpipe/}.
 
-\subsection{justext}
+\subsection{JusText}
 
-The justext algorithem is implemented in python and the documentation is found under \url{https://code.google.com/p/justext/}. It is not yet defined how it will be integrated into the text extraction framework. See risk analysis for further information.
+The JusText algorithm is implemented in python and the documentation is found under \url{https://code.google.com/p/justext/}. It is not yet defined how it will be integrated into the text extraction framework. See risk analysis for further information.
 
 

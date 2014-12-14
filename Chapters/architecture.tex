@@ -25,17 +25,14 @@
 
 \end{tabular}
 
-\section{Introduction}
+\section{Introduction} 
 
 This document describes the software architecture of the context extraction test framework. 
 The context extraction test framework will perform automated text extraction on a set of HTML test data with two to three different text extraction algorithms. After measuring the performance of each algorithm, an output file with the measured results is generated.
 
-\section{Logical view}
+\section{System Overview}
 
-This section describes how the system is structured in terms of units of implementation.
-
-\subsection{Approach}
-This section describes the approach for elaborating the software architecture. 
+This section describes the approach for elaborating the software architecture and gives an overview over the software architecture. 
 The following figure from the software requirement specification is the basis for elaborating the software architecture.
 
 %\begin{landscape}
@@ -44,10 +41,15 @@ The following figure from the software requirement specification is the basis fo
 
 %\end{landscape}
 
-First all possible entities in the domain are identified and a data model is elaborated. The data model is described in \ref{subsec:Data model}. Then the business logic is researched based on the figure above. With this knowledge, the five packages main, reader, classifier, analyzer and writer are defined. The functions for each package is then evaluated and split into single classes. During the implementation of the first approach, some classes are adapted due to unforeseen circumstances. The outcome is described in \ref{subsec:Business Logic}.
+First all possible entities in the domain are identified and a data model is elaborated. The data model is described in section \ref{subsec:Data model}. Then the business logic is researched based on the figure above. With this knowledge, the five packages main, reader, classifier, analyzer and writer are defined. The functions for each package is then evaluated and split into single classes. During the implementation of the first approach, some classes are adapted due to unforeseen circumstances. The outcome is described in section \ref{subsec:Business Logic}.
 \pagebreak
 
-\section{Data model}
+\section{Logical view}
+
+This section describes how the system is structured in terms of units of implementation.
+
+
+\subsection{Data model}
 \label{subsec:Data model}
 
 The following diagram shows the data model of the application. 
@@ -65,7 +67,7 @@ Each TestCase has an HtmlFile object. It contains the content of the actual HTML
 Each TestCase has a ContentFile object. It contains the content of the actual text file as String and the file path.
 
 \subsection{ExctractedContent}
-Each TestCase can have multiple ExctractedContent objects. Each of them represents a result of a content extraction from an extractor such as Justext or Boilerpipe.
+Each TestCase can have multiple ExctractedContent objects. Each of them represents a result of a content extraction from an extractor such as JusText or Boilerpipe.
 
 \subsection{Result}
 A TestCase or an ExctractedContent object can have Result objects. The results are key value pairs which represent analytical data. An example for a Result related to a TestCase would be the word count of the content file, which is generally valid. An example for a Result related to an ExctractedContent would be the word count of true negative words, which is only valid for one specific ExctractedContent.
@@ -73,7 +75,7 @@ A TestCase or an ExctractedContent object can have Result objects. The results a
 
 \begin{landscape}
 
-\section{Business Logic}
+\subsection{Business Logic}
 \label{subsec:Business Logic}
 
 The following diagram shows the business logic of the application. The diagram does not show all of the classes but the most important ones. 
@@ -122,9 +124,9 @@ BoilerpipeExtractor &
 classifier &
 The BoilerpipeExtractor implements the IExtractor and is the interface to the Boilerpipe package. It handles all dependencies on the Boilerpipe package and returns the extracted content as a string.
 \\ \hline
-JustextExtractor &
+JusTextExtractor &
 classifier &
-The BoilerpipeExtractor implements the IExtractor and is the interface to the Justext python program. The Java ProcessBuilder is used to create operating processes. One can then perform operating system commands and run the python script. The python script creates a text file with the extracted content which is read by the JustextExtractor class and returned as String.
+The BoilerpipeExtractor implements the IExtractor and is the interface to the JusText python program. The Java ProcessBuilder is used to create operating processes. One can then perform operating system commands and run the python script. The python script creates a text file with the extracted content which is read by the JusTextExtractor class and returned as String.
 \\ \hline
 AnalyzerManager &          
 analyzer &          
@@ -168,7 +170,12 @@ The data model is passed through the business logic and is enriched with data du
 
 \section{Development view}
 
-This chapter describes the used frameworks and tools which are used during the development process.
+This chapter describes the used tools and libraries which are used during the development process as well as the continuous integration process.
+
+
+\subsection{Continuous Integration Process}
+
+The continuous integration process for this process is handled with the version control tool git, the continuous integration server Travic CI and the project automation tool Gradle. The single tools are described in more details in the following sections. The general process is however defined like this. Since this is a one man project, there is only one git branch present for the most time of the development phase. The application is developed on the local branch and unit tests are written for critical components. The application is then built locally with Gradle. Possible problems are solved and the changes are pushed on the master git repository. As soon as there are any new commmits on the master repository, the application is built as well on the Travic CI server. If the build is not successful. An error report is sent to the user.
 
 \subsection{git}
 
@@ -189,11 +196,11 @@ The build process is defined in the build.gradle file which is located in the so
 
 \subsection{Travic CI}
 
-Travic CI is an open source build server. It is easy to use in combination with git. One only needs to add a config file in the source directory of the project and define the git repository. Afterwards the project is build for every change. If the build does not pass, a mail is sent to the user. The actual status of the build can be found under following link \url{https://travis-ci.org/heya87/pawiTwo}.
+Travic CI is an open source build server. It is easy to use in combination with git. One only needs to add a configuration file in the source directory of the project and define the git repository. Afterwards the project is build for every change. If the build does not pass, a mail is sent to the user. The actual status of the build can be found under following link \url{https://travis-ci.org/heya87/pawiTwo}.
 
-\subsection{Justext}
+\subsection{JusText}
 
-An implementation of the Justext algorithm is available in Python. The ressources are available under following link \url{https://code.google.com/p/justext/}. There is no implementation in Java so for the first approach the python application is called from Java with a ProcessBuilder.
+An implementation of the JusText algorithm is available in Python. The ressources are available under following link \url{https://code.google.com/p/justext/}. There is no implementation in Java so for the first approach the python application is called from Java with a ProcessBuilder.
 The command to extract an HTML file with justext is very simple:
 
 \begin {lstlisting}
@@ -206,9 +213,16 @@ This command extracts the HTMl file page.html into a text file called cleaned-pa
 
 An implementation of the Boilerpipe Algorithm is available in Java. The resources are available under following link \url{https://code.google.com/p/boilerpipe/}. This algorithm can be used out of the box with calls against the Java API.
 
+\subsection{diff-match-patch}
+
+The Java library diff-match-patch \cite{diffMatchPatch} is used to compare text files and find differences. For this file, it is used to extract the values TP, TN, FP, FN when comparing the actual content files with the outcome of the algorithms.
+
 
 \section{Physical view}
 
-Following diagram shows the physical view of the application. The application is running on a single device, which results in a very simple diagram. The external components are the Boilerpipe algorithm implemented in Java and the Justext algorithm implemented in Python. The python program is called with system calls. All the components are located on the same device.
+Following diagram shows the physical view of the application. The application is running on a single device, which results in a very simple diagram. The external components are the Boilerpipe algorithm implemented in Java and the JusText algorithm implemented in Python. The python program is called with system calls. All the components are located on the same device. 
+The config.txt file contains configuration parameter for the application and the different output text files contain the results of the test framework.
 
 \includegraphics[width=10cm]{Figures/deploymentDiagram.pdf}
+
+

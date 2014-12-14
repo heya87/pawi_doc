@@ -13,25 +13,26 @@
 \contentsline {section}{\numberline {1.3}Text extraction and algorithms}{2}{section.15}
 \contentsline {subsection}{\numberline {1.3.1}Text extraction}{2}{subsection.16}
 \contentsline {subsection}{\numberline {1.3.2}Boilerpipe}{2}{subsection.17}
-\contentsline {subsection}{\numberline {1.3.3}Justext}{2}{subsection.18}
+\contentsline {subsection}{\numberline {1.3.3}JusText}{2}{subsection.18}
 \contentsline {subsection}{\numberline {1.3.4}Classification}{3}{subsection.19}
-\contentsline {section}{\numberline {1.4}Conclusion}{3}{section.21}
-\contentsline {chapter}{\numberline {2}Solution Development}{4}{chapter.22}
-\contentsline {section}{\numberline {2.1}Approach}{4}{section.23}
-\contentsline {subsection}{\numberline {2.1.1}Planning}{4}{subsection.24}
-\contentsline {subsection}{\numberline {2.1.2}Programming}{5}{subsection.26}
-\contentsline {subsection}{\numberline {2.1.3}Modification Justext}{6}{subsection.30}
-\contentsline {subsection}{\numberline {2.1.4}Modification Boilerpipe}{7}{subsection.34}
-\contentsline {section}{\numberline {2.2}Results}{7}{section.35}
-\contentsline {subsection}{\numberline {2.2.1}Statistical data}{7}{subsection.36}
-\contentsline {subsection}{\numberline {2.2.2}Analysis}{7}{subsection.38}
-\contentsline {subsection}{\numberline {2.2.3}Detailed Analysis}{9}{subsection.39}
-\contentsline {chapter}{\numberline {3}Conclusion}{11}{chapter.48}
-\contentsline {section}{\numberline {3.1}Conclusion}{11}{section.49}
-\contentsline {section}{\numberline {3.2}Lessons learned}{11}{section.50}
-\contentsline {subsection}{\numberline {3.2.1}Planning}{11}{subsection.51}
-\contentsline {subsection}{\numberline {3.2.2}Programming}{12}{subsection.52}
-\contentsline {section}{\numberline {3.3}Further work}{12}{section.53}
+\contentsline {section}{\numberline {1.4}Goals}{3}{section.21}
+\contentsline {section}{\numberline {1.5}Summary}{4}{section.22}
+\contentsline {chapter}{\numberline {2}Solution development}{5}{chapter.23}
+\contentsline {section}{\numberline {2.1}Approach}{5}{section.24}
+\contentsline {subsection}{\numberline {2.1.1}Planning}{5}{subsection.25}
+\contentsline {subsection}{\numberline {2.1.2}Programming}{6}{subsection.26}
+\contentsline {subsection}{\numberline {2.1.3}Modification JusText}{7}{subsection.27}
+\contentsline {subsection}{\numberline {2.1.4}Modification Boilerpipe}{8}{subsection.31}
+\contentsline {section}{\numberline {2.2}Results}{8}{section.32}
+\contentsline {subsection}{\numberline {2.2.1}Statistical data}{8}{subsection.33}
+\contentsline {subsection}{\numberline {2.2.2}Analysis}{8}{subsection.34}
+\contentsline {subsection}{\numberline {2.2.3}Detailed analysis}{10}{subsection.39}
+\contentsline {chapter}{\numberline {3}Discussion and Outlook}{12}{chapter.48}
+\contentsline {section}{\numberline {3.1}Conclusion}{12}{section.49}
+\contentsline {section}{\numberline {3.2}Lessons learned}{12}{section.50}
+\contentsline {subsection}{\numberline {3.2.1}Planning}{12}{subsection.51}
+\contentsline {subsection}{\numberline {3.2.2}Programming}{13}{subsection.52}
+\contentsline {section}{\numberline {3.3}Further work}{13}{section.53}
 \vspace {2em}
 \contentsline {chapter}{Appendices}{1}{section.53}
 \setcounter {tocdepth}{0}
@@ -84,7 +85,7 @@
 \contentsline {subsection}{\numberline {C.4.2}Overview}{21}{subsection.101}
 \contentsline {subsubsection}{\numberline {C.4.2.1}Read configuration}{21}{subsubsection.102}
 \contentsline {subsubsection}{\numberline {C.4.2.2}Create test}{22}{subsubsection.107}
-\contentsline {subsubsection}{\numberline {C.4.2.3}Integration Justext algorithm}{22}{subsubsection.108}
+\contentsline {subsubsection}{\numberline {C.4.2.3}Integration JusText algorithm}{22}{subsubsection.108}
 \contentsline {subsubsection}{\numberline {C.4.2.4}Integration Boilerpipe algorithm}{22}{subsubsection.109}
 \contentsline {subsubsection}{\numberline {C.4.2.5}Evaluation and Implementation RSS feed algorithm}{23}{subsubsection.110}
 \contentsline {subsubsection}{\numberline {C.4.2.6}Evaluation of classification text}{23}{subsubsection.111}
@@ -94,63 +95,72 @@
 \contentsline {subsection}{\numberline {C.4.5}Analytical values}{25}{subsection.118}
 \contentsline {section}{\numberline {C.5}External Interface Requirements}{26}{section.123}
 \contentsline {subsection}{\numberline {C.5.1}Boilerpipe}{26}{subsection.124}
-\contentsline {subsection}{\numberline {C.5.2}justext}{26}{subsection.125}
+\contentsline {subsection}{\numberline {C.5.2}JusText}{26}{subsection.125}
 \contentsline {chapter}{\numberline {D}Software Architecture}{27}{appendix.126}
 \contentsline {section}{\numberline {D.1}Version}{27}{section.127}
 \contentsline {section}{\numberline {D.2}Introduction}{27}{section.128}
-\contentsline {section}{\numberline {D.3}Logical view}{27}{section.129}
-\contentsline {subsection}{\numberline {D.3.1}Approach}{28}{subsection.130}
-\contentsline {section}{\numberline {D.4}Data model}{29}{section.131}
-\contentsline {subsection}{\numberline {D.4.1}TestCase}{29}{subsection.132}
-\contentsline {subsection}{\numberline {D.4.2}HtmlFile}{29}{subsection.133}
-\contentsline {subsection}{\numberline {D.4.3}ContentFile}{29}{subsection.134}
-\contentsline {subsection}{\numberline {D.4.4}ExctractedContent}{30}{subsection.135}
-\contentsline {subsection}{\numberline {D.4.5}Result}{30}{subsection.136}
-\contentsline {section}{\numberline {D.5}Business Logic}{31}{section.137}
-\contentsline {subsection}{\numberline {D.5.1}Description of single classes}{32}{subsection.138}
-\contentsline {section}{\numberline {D.6}Process view}{34}{section.140}
-\contentsline {section}{\numberline {D.7}Development view}{35}{section.141}
-\contentsline {subsection}{\numberline {D.7.1}git}{35}{subsection.142}
-\contentsline {subsection}{\numberline {D.7.2}Gradle}{35}{subsection.143}
-\contentsline {subsection}{\numberline {D.7.3}Travic CI}{36}{subsection.144}
-\contentsline {subsection}{\numberline {D.7.4}Justext}{36}{subsection.145}
-\contentsline {subsection}{\numberline {D.7.5}Boilerpipe}{36}{subsection.148}
-\contentsline {section}{\numberline {D.8}Physical view}{36}{section.149}
-\contentsline {chapter}{\numberline {E}Test plan}{38}{appendix.150}
-\contentsline {section}{\numberline {E.1}Introduction}{38}{section.151}
-\contentsline {subsection}{\numberline {E.1.1}Test concept}{38}{subsection.152}
-\contentsline {subsection}{\numberline {E.1.2}Test cases}{38}{subsection.153}
-\contentsline {chapter}{\numberline {F}Test protocol}{43}{appendix.182}
-\contentsline {section}{\numberline {F.1}Introduction}{43}{section.183}
-\contentsline {subsection}{\numberline {F.1.1}Test run one}{43}{subsection.184}
-\contentsline {subsection}{\numberline {F.1.2}Test run two}{44}{subsection.185}
-\contentsline {subsection}{\numberline {F.1.3}Test run three}{44}{subsection.186}
-\contentsline {chapter}{\numberline {G}User manual}{45}{appendix.187}
-\contentsline {section}{\numberline {G.1}Introduction}{45}{section.188}
-\contentsline {section}{\numberline {G.2}System requirements}{45}{section.189}
-\contentsline {section}{\numberline {G.3}Installation}{45}{section.190}
-\contentsline {subsection}{\numberline {G.3.1}}{45}{subsection.191}
-\contentsline {section}{\numberline {G.4}Usage \& Configuration}{46}{section.202}
-\contentsline {chapter}{\numberline {H}MS1 meeting report}{47}{appendix.203}
-\contentsline {section}{\numberline {H.1}Introduction}{47}{section.204}
-\contentsline {section}{\numberline {H.2}Version}{47}{section.205}
-\contentsline {section}{\numberline {H.3}Attendees}{47}{section.206}
-\contentsline {section}{\numberline {H.4}Delivery objects}{47}{section.207}
-\contentsline {section}{\numberline {H.5}Decisions}{48}{section.208}
-\contentsline {section}{\numberline {H.6}Rework}{48}{section.209}
-\contentsline {chapter}{\numberline {I}MS2 meeting report}{49}{appendix.210}
-\contentsline {section}{\numberline {I.1}Introduction}{49}{section.211}
-\contentsline {section}{\numberline {I.2}Version}{49}{section.212}
-\contentsline {section}{\numberline {I.3}Attendees}{49}{section.213}
-\contentsline {section}{\numberline {I.4}Delivery objects}{49}{section.214}
-\contentsline {section}{\numberline {I.5}Decisions}{50}{section.215}
-\contentsline {section}{\numberline {I.6}Rework}{50}{section.216}
-\contentsline {chapter}{\numberline {J}MS4 meeting report}{51}{appendix.217}
-\contentsline {section}{\numberline {J.1}Introduction}{51}{section.218}
-\contentsline {section}{\numberline {J.2}Version}{51}{section.219}
-\contentsline {section}{\numberline {J.3}Attendees}{51}{section.220}
-\contentsline {section}{\numberline {J.4}Delivery objects}{51}{section.221}
-\contentsline {section}{\numberline {J.5}Decisions}{52}{section.222}
-\contentsline {section}{\numberline {J.6}Rework}{52}{section.223}
+\contentsline {section}{\numberline {D.3}System Overview}{28}{section.129}
+\contentsline {section}{\numberline {D.4}Logical view}{29}{section.130}
+\contentsline {subsection}{\numberline {D.4.1}Data model}{29}{subsection.131}
+\contentsline {subsection}{\numberline {D.4.2}TestCase}{29}{subsection.132}
+\contentsline {subsection}{\numberline {D.4.3}HtmlFile}{29}{subsection.133}
+\contentsline {subsection}{\numberline {D.4.4}ContentFile}{29}{subsection.134}
+\contentsline {subsection}{\numberline {D.4.5}ExctractedContent}{30}{subsection.135}
+\contentsline {subsection}{\numberline {D.4.6}Result}{30}{subsection.136}
+\contentsline {subsection}{\numberline {D.4.7}Business Logic}{31}{subsection.137}
+\contentsline {subsection}{\numberline {D.4.8}Description of single classes}{32}{subsection.138}
+\contentsline {section}{\numberline {D.5}Process view}{34}{section.140}
+\contentsline {section}{\numberline {D.6}Development view}{35}{section.141}
+\contentsline {subsection}{\numberline {D.6.1}Continuous Integration Process}{35}{subsection.142}
+\contentsline {subsection}{\numberline {D.6.2}git}{35}{subsection.143}
+\contentsline {subsection}{\numberline {D.6.3}Gradle}{36}{subsection.144}
+\contentsline {subsection}{\numberline {D.6.4}Travic CI}{36}{subsection.145}
+\contentsline {subsection}{\numberline {D.6.5}JusText}{36}{subsection.146}
+\contentsline {subsection}{\numberline {D.6.6}Boilerpipe}{37}{subsection.149}
+\contentsline {subsection}{\numberline {D.6.7}diff-match-patch}{37}{subsection.150}
+\contentsline {section}{\numberline {D.7}Physical view}{37}{section.151}
+\contentsline {chapter}{\numberline {E}Test plan}{38}{appendix.152}
+\contentsline {section}{\numberline {E.1}Introduction}{38}{section.153}
+\contentsline {subsection}{\numberline {E.1.1}Test concept}{38}{subsection.154}
+\contentsline {subsection}{\numberline {E.1.2}Test cases}{38}{subsection.155}
+\contentsline {chapter}{\numberline {F}Test protocol}{43}{appendix.184}
+\contentsline {section}{\numberline {F.1}Introduction}{43}{section.185}
+\contentsline {subsection}{\numberline {F.1.1}Test run one}{43}{subsection.186}
+\contentsline {subsection}{\numberline {F.1.2}Test run two}{44}{subsection.187}
+\contentsline {subsection}{\numberline {F.1.3}Test run three}{44}{subsection.188}
+\contentsline {chapter}{\numberline {G}User manual}{45}{appendix.189}
+\contentsline {section}{\numberline {G.1}Introduction}{45}{section.190}
+\contentsline {section}{\numberline {G.2}System requirements}{45}{section.191}
+\contentsline {section}{\numberline {G.3}Installation}{45}{section.192}
+\contentsline {subsection}{\numberline {G.3.1}Installation JusText}{46}{subsection.200}
+\contentsline {section}{\numberline {G.4}Configuration \& Usage}{46}{section.212}
+\contentsline {subsection}{\numberline {G.4.1}Configuration}{46}{subsection.213}
+\contentsline {subsubsection}{\numberline {G.4.1.1}Classifier}{46}{subsubsection.214}
+\contentsline {subsubsection}{\numberline {G.4.1.2}Language}{47}{subsubsection.219}
+\contentsline {subsubsection}{\numberline {G.4.1.3}Inspect}{47}{subsubsection.224}
+\contentsline {subsubsection}{\numberline {G.4.1.4}Filter}{47}{subsubsection.227}
+\contentsline {subsection}{\numberline {G.4.2}Run a test}{48}{subsection.230}
+\contentsline {subsection}{\numberline {G.4.3}Results}{49}{subsection.238}
+\contentsline {chapter}{\numberline {H}MS1 meeting report}{50}{appendix.239}
+\contentsline {section}{\numberline {H.1}Introduction}{50}{section.240}
+\contentsline {section}{\numberline {H.2}Version}{50}{section.241}
+\contentsline {section}{\numberline {H.3}Attendees}{50}{section.242}
+\contentsline {section}{\numberline {H.4}Delivery objects}{50}{section.243}
+\contentsline {section}{\numberline {H.5}Decisions}{51}{section.244}
+\contentsline {section}{\numberline {H.6}Rework}{51}{section.245}
+\contentsline {chapter}{\numberline {I}MS2 meeting report}{52}{appendix.246}
+\contentsline {section}{\numberline {I.1}Introduction}{52}{section.247}
+\contentsline {section}{\numberline {I.2}Version}{52}{section.248}
+\contentsline {section}{\numberline {I.3}Attendees}{52}{section.249}
+\contentsline {section}{\numberline {I.4}Delivery objects}{52}{section.250}
+\contentsline {section}{\numberline {I.5}Decisions}{53}{section.251}
+\contentsline {section}{\numberline {I.6}Rework}{53}{section.252}
+\contentsline {chapter}{\numberline {J}MS4 meeting report}{54}{appendix.253}
+\contentsline {section}{\numberline {J.1}Introduction}{54}{section.254}
+\contentsline {section}{\numberline {J.2}Version}{54}{section.255}
+\contentsline {section}{\numberline {J.3}Attendees}{54}{section.256}
+\contentsline {section}{\numberline {J.4}Delivery objects}{54}{section.257}
+\contentsline {section}{\numberline {J.5}Decisions}{55}{section.258}
+\contentsline {section}{\numberline {J.6}Rework}{55}{section.259}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{53}{dummy.224}
+\contentsline {chapter}{Bibliography}{56}{dummy.260}

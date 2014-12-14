@@ -10,23 +10,23 @@
 
 \section{Introduction}
 
+This document describes how to install and use the content extraction test framework.
 
 \section{System requirements}
 
-To use the text extraction test framework, the system needs to fulfill following system requirements.
+To use the text extraction test framework, the software artifacts listed in the following table needs to be installed on your system. These artifacts are all for free and can be downloaded from the links below.
 
 \begin{tabular}{| p{2cm} | p{1.5cm} | p{9.5cm} |} 
 	\hline
 	\textbf{Software} & \textbf{Version} & \textbf{Source} \\ \hline
-	Ubuntu & 12.04 & \url{http://releases.ubuntu.com/12.04/} \\ \hline
-	git & 2.2.0 & \url{http://git-scm.com/download/linux} \\ \hline
-	python & 2.7.6 & \url{https://www.python.org/download/releases/2.7.6/} \\ \hline
+	Ubuntu & 12.XX & \url{http://releases.ubuntu.com/12.04/} \\ \hline
+	git & 2.2.X & \url{http://git-scm.com/download/linux} \\ \hline
+	python & 2.7.X & \url{https://www.python.org/download/releases/2.7.6/} \\ \hline
 \end{tabular}
 
 
 \section{Installation}
 
-\subsection{}
 \begin{enumerate}
 
 \item Checkout the repository with git to your favorite directory.
@@ -42,22 +42,154 @@ git clone https://github.com/heya87/pawiTwo
 ./gradlew build
 \end{lstlisting}
 
+\end{enumerate}
 
 
-\item Put the test files you would like into the following folders
+\subsection{Installation JusText}
+\label{userManual:InstallationJusText}
+If you want to run the test framework using the justext extractor, you have to install the according python package first.
 
-\item Put the content files into following folder: ~/build/resources/main/content
-\item Put the HTML files into following folder: ~/build/resources/main/html
-\item Run the test with the gradle wrapper.
-
+\begin{enumerate}
+\item Open your favorite console application.
+\item Download the needed resources to your favorite directory.
 \begin{lstlisting}
-./gradlew build
+wget http://justext.googlecode.com/files/justext-1.2.tar.gz
 \end{lstlisting}
-\item Find the results in the output folder: ~/build/resources/main/
+
+\item Extract the downloaded files.
+\begin{lstlisting}
+tar xzvf justext-1.2.tar.gz
+\end{lstlisting}
+
+
+\item Install the package.
+\begin{lstlisting}
+cd justext-1.2/
+python setup.py install
+\end{lstlisting}
+
+
+
 
 
 \end{enumerate}
 
 
-\section{Usage \& Configuration}
+\section{Configuration \& Usage}
 
+\subsection{Configuration}
+
+To addapt the application functionalities to your wishes, you can use several configuration items.
+
+\subsubsection{Classifier}
+
+The classifier configuration defines, which classifiers are tested with the test framework. The implemented classifier are JusText and Boilerpipe.
+To use these classifier, add following lines into the configuration file:
+
+\textbf{JusText}
+
+\begin{lstlisting}
+classifier:justext;
+\end{lstlisting}
+
+\textbf{Note:} To run the test framework with JusText, python and the python package justext needs to be installed. Please check \ref{userManual:InstallationJusText} for more details.
+
+
+\textbf{Boilerpipe}
+
+\begin{lstlisting}
+classifier:boilerpipe;
+\end{lstlisting}
+
+
+\subsubsection{Language}
+
+The test framework needs to know which language the test files are written in. The two languages english and german is available. To configure the language, add following lines to the configuration file.
+
+\textbf{English}
+\begin{lstlisting}
+language:english;
+\end{lstlisting}
+
+\textbf{German}
+\begin{lstlisting}
+language:german;
+\end{lstlisting}
+
+\textbf{Note:} The default language is English.
+
+\subsubsection{Inspect}
+\label{usermanual:inspect}
+
+If you want to inspect one test case and get specific details for it, you can do this with the inspect confiugration item.
+If you have a test file pair in the input folders which are named "testOfInterest" you have to add following line to the configuration file for inspection.
+
+\begin{lstlisting}
+inspect:testOfInterest;
+\end{lstlisting}
+
+
+\subsubsection{Filter}
+
+It is possible to filter the output results for specific values. Several configuration items are needed to set the filter.
+
+\textbf{Extractor} \linebreak
+Defines for which extractor the filter is used. The possible options are:
+\begin{itemize}
+\item justext
+\item boilerpipe
+\end{itemize}
+
+\mbox{\textbf{Filter entity}} \linebreak
+Defines for which entity the filter is used. The possible options are:
+\begin{itemize}
+\item precision
+\item recall
+\item fmeasure
+\item fallout
+\item accuracy
+\end{itemize}
+
+\mbox{\textbf{Filter type}} \linebreak
+Defines the filter type. The possible options are:
+\begin{itemize}
+\item{min}
+\item{max}
+\end{itemize}
+
+\mbox{\textbf{Filter value}} \linebreak
+Defines for which value the filter is used. Since the filter entities are all percentages, the filter value can be any float value between 0 and 1. All filters with other values are ignored.
+
+
+\textbf{Example} \linebreak
+If you want to filter the results for following conditions. All test cases which are tested by JusText and have a precision lower than 50.\% 
+
+\begin{lstlisting}
+filter:justext:precision:max:0.5;
+\end{lstlisting}
+
+\subsection{Run a test}
+
+\begin{enumerate}
+\item Put the content files into following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/content
+\item Put the HTML files into following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/html
+\item Adjust the configuration file to you wishes. The configuration is located at: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/config.txt
+\item Run the test with the gradle wrapper.
+
+\begin{lstlisting}
+./gradlew run
+\end{lstlisting}
+\item Find the results in the output folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}build/resources/main/
+\end{enumerate}
+
+\subsection{Results}
+
+After running a test multiple result files are generated and written in following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/
+
+The different result files are:
+\begin{itemize}
+
+\item \textbf{overall\_results.txt}: This file contains the average values for Precision, Recall, etc. from all tested files.
+\item \textbf{detailed\_results.txt}: This file contains the results for each test. 
+\item \textbf{resut\_testOfInterest.txt}: If you have defined the test case testOfInterest for further inspection (see \ref{usermanual:inspect}), an additional text file is generated which contains elaborated information about this test.
+\end{itemize}
