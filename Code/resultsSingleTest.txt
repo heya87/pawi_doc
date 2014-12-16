@@ -1,0 +1,55 @@
+Test name: testOfInterest
+
+General results:
+ALL_WORDS_COUNT = 2547
+CONTENT_WORD_COUNT = 2168
+
+Results boilerpipe:
+CLASSIFIED_AS_CONTENT_WORDS = 2245
+TRUE_POSITIVE_WORDS = 2177
+FALSE_NEGATIVE_WORDS = 11
+FALSE_POSITIVE_WORDS = 104
+TRUE_NEGATIVE_WORDS = 255
+PRESICION = 0.95440596
+RECALL = 0.9949726
+FALLOUT = 0.2896936
+FMEASURE = 0.97426724
+ACCURACY = 0.9548488
+
+Results justext:
+CLASSIFIED_AS_CONTENT_WORDS = 2072
+TRUE_POSITIVE_WORDS = 2073
+FALSE_NEGATIVE_WORDS = 123
+FALSE_POSITIVE_WORDS = 29
+TRUE_NEGATIVE_WORDS = 322
+PRESICION = 0.9862036
+RECALL = 0.9439891
+FALLOUT = 0.08262108
+FMEASURE = 0.9646348
+ACCURACY = 0.9403219
+
+---------------------------------------------------------------
+Content file:
+---------------------------------------------------------------
+...relevant content from the HTML source files...
+
+---------------------------------------------------------------
+Extractor: boilerpipe
+---------------------------------------------------------------
+....Text extracted by Boilerpipe....
+
+---------------------------------------------------------------
+Extractor: boilerpipe Results as blocks
+---------------------------------------------------------------
+....Boilerpipe results formatted as blocks....
+
+---------------------------------------------------------------
+Extractor: justext
+---------------------------------------------------------------
+....Text extracted by JusText....
+
+---------------------------------------------------------------
+Extractor: justext Results as blocks
+---------------------------------------------------------------
+....JusText results formatted as blocks....
+\end{lstlisting}

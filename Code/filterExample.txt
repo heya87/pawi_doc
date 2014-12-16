@@ -1,0 +1,1 @@
+filter:justext:precision:min:0.8;

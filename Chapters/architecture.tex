@@ -36,9 +36,12 @@ This section describes the approach for elaborating the software architecture an
 The following figure from the software requirement specification is the basis for elaborating the software architecture.
 
 %\begin{landscape}
-
+\ref{asfdsafdsa}
+\begin{figure}
 \includegraphics[width=15cm]{Figures/AppOverview.pdf}
-
+\caption{blablalb}
+\label{asfdsafdsa}
+\end{figure}
 %\end{landscape}
 
 First all possible entities in the domain are identified and a data model is elaborated. The data model is described in section \ref{subsec:Data model}. Then the business logic is researched based on the figure above. With this knowledge, the five packages main, reader, classifier, analyzer and writer are defined. The functions for each package is then evaluated and split into single classes. During the implementation of the first approach, some classes are adapted due to unforeseen circumstances. The outcome is described in section \ref{subsec:Business Logic}.
@@ -67,12 +70,13 @@ Each TestCase has an HtmlFile object. It contains the content of the actual HTML
 Each TestCase has a ContentFile object. It contains the content of the actual text file as String and the file path.
 
 \subsection{ExctractedContent}
-Each TestCase can have multiple ExctractedContent objects. Each of them represents a result of a content extraction from an extractor such as JusText or Boilerpipe.
+Each TestCase can have multiple ExctractedContent objects. Each of them represents a result of a content extraction from an extractor such as JusText or Boilerpipe. It contains the extracted text as well as the extracted text separated in Block objects with the generated classification.
 
 \subsection{Result}
 A TestCase or an ExctractedContent object can have Result objects. The results are key value pairs which represent analytical data. An example for a Result related to a TestCase would be the word count of the content file, which is generally valid. An example for a Result related to an ExctractedContent would be the word count of true negative words, which is only valid for one specific ExctractedContent.
 
-
+\subsection{Config}
+A Config object contains all configurable information about a test run. It is generated from the config.txt file at the beginning of the test. Configuration parameters like test language, used extractors, possible filters are defined by the Config object.
 \begin{landscape}
 
 \subsection{Business Logic}
@@ -136,13 +140,17 @@ IAnalyzer &
 analyzer &
 The IAnalyzer interface is a simple interface to the different analyzers. Each analyzer can generate one or more Result objects.
 \\ \hline
-WordCounterAnalyzer &
+DiffToolAnalyzer &
 analyzer &
-The WordCounterAnalyzer is a simple analyzer which counts all words of the content file, the HTML file and each extracted content.
+The DiffToolAnalyzer compares two Strings and generates the values TP, FP, TN and FN and puts them as Result object into the test cases.
 \\ \hline
-MatchingWordAnalyzer &
+StatisticsAnalyzer &
 analyzer &
-The MatchingWordAnalyzer compares the content file with each extracted content and calculates the values for true positive, true negative, false positive and false negative.
+The StatisticsAnalyzer extracts the values TP, TN, FP, FN from the test cases and calculates Precision, Recall, F-Measure, Fallout and accuracy and FN and puts them as Result object into the test cases.
+\\ \hline
+ResultFilter &
+writer &
+Filters all TestCases for the filters given in the configuration objects.
 \\ \hline
 Formatter &           
 writer &           
@@ -154,7 +162,7 @@ The writer wrapper writes a string into a text file. It is used to wrap the Buff
 \\ \hline
 ConfigReader &
 reader &
-The ConfigReader class reads the config.txt file and puts the key value pairs into a HashMap.
+The ConfigReader class reads the config.txt file and generates a Config object. This object contains the test language, the used extractors, possible filters and single test cases which are inspected for closer inspection.
 \\ \hline
 \end{longtable}
 
@@ -165,43 +173,44 @@ This section describes the dynamic aspects of the application.
 
 \includegraphics[width=15cm]{Figures/activityDiagram.pdf}
 
-The data model is passed through the business logic and is enriched with data during the test procedure. First the input directories are checked for files by the FileObserver and TestCases are generated for each file pair with the same name. Then all the TestCases are then handed over to the ExtractorManager. The ExtractorManager extracts each TestCase with all available implementations of IExtractor and puts the Results into ExtractionResults. After that, all the TestCases are handed over to the Analyzer which runs each implementation of IAnalyzer. Each IAnalyzer produces at least one Result and puts it into the TestCase. To simplify the diagram, only two Analyzers are drawn. After generating some Results, the Formatter serializes the Result Objects into a String as a CSV table and the WriterWrapper persists the CSV data into an output file.
+The data model is passed through the business logic and is enriched with data during the test procedure. First the input directories are checked for files by the FileObserver and TestCases are generated for each file pair with the same name. Then all the TestCases are then handed over to the ExtractorManager. The ExtractorManager extracts each TestCase with all available implementations of IExtractor and puts the Results into ExtractionResults. After that, all the TestCases are handed over to the Analyzer which runs each implementation of IAnalyzer. Each IAnalyzer produces at least one Result and puts it into the TestCase. To simplify the diagram, only two Analyzers are drawn. After generating the Results, they are filtered if any filter is set in the Config object. Then, the Formatter serializes the Result Objects into a String as a CSV table and the WriterWrapper persists the CSV data into an output file.
 
 
 \section{Development view}
+\label{architecture:developmentView}
 
 This chapter describes the used tools and libraries which are used during the development process as well as the continuous integration process.
 
 
 \subsection{Continuous Integration Process}
 
-The continuous integration process for this process is handled with the version control tool git, the continuous integration server Travic CI and the project automation tool Gradle. The single tools are described in more details in the following sections. The general process is however defined like this. Since this is a one man project, there is only one git branch present for the most time of the development phase. The application is developed on the local branch and unit tests are written for critical components. The application is then built locally with Gradle. Possible problems are solved and the changes are pushed on the master git repository. As soon as there are any new commmits on the master repository, the application is built as well on the Travic CI server. If the build is not successful. An error report is sent to the user.
+The continuous integration process for this process is handled with the version control tool Git, the continuous integration server Travis CI and the project automation tool Gradle. The single tools are described in more details in the following sections. The general process is however defined like this. Since this is a one man project, there is only one Git branch present for the most time of the development phase. The application is developed on the local branch and unit tests are written for critical components. The application is then built locally with Gradle. Possible problems are solved and the changes are pushed on the master Git repository. As soon as there are any new commits on the master repository, the application is built as well on the Travis CI server. If the build is not successful. An error report is sent to the user.
 
-\subsection{git}
+\subsection{Git}
 
-Git is a distributed version control system. Unlike other version control systems like Subversion, git is not using a central server but each user has his own copy with the complete history on the local system. It is much easier to work with additional branches or tags. 
-Because of these advantages and because Layzapp is working with it as well, git was chosen to use for this project for the code sources and as well for the documentation.
+Git is a distributed version control system. Unlike other version control systems like Subversion, Git is not using a central server but each user has his own copy with the complete history on the local system. It is much easier to work with additional branches or tags. 
+Because of these advantages and because Layzapp is working with it as well, Git was chosen to use for this project for the code sources and as well for the documentation.
 The resources are open source and are available under following links.
 
 \begin{itemize}
-\item code: \url{https://github.com/heya87/pawiTwo}
-\item documentation: \url{https://github.com/heya87/pawi_doc}
+\item code: \url{https://Github.com/heya87/pawiTwo}
+\item documentation: \url{https://Github.com/heya87/pawi_doc}
 \end{itemize}
 
 
 \subsection{Gradle}
 
-Gradle is a project automation tool which uses a Groovy-based domain-specific language (DSL) instead of the more traditional XML form of declaring the project configuration. All the dependencies of the project are handled with Gradle and it is very easy to deploy on a new system. The user only needs to download the git repository and can build the project with the Gradle wrapper without installing any new software. All dependencies are then downloaded automatically and the user can start working without caring about missing packages.
+Gradle is a project automation tool which uses a Groovy-based domain-specific language (DSL) instead of the more traditional XML form of declaring the project configuration. All the dependencies of the project are handled with Gradle and it is very easy to deploy on a new system. The user only needs to download the Git repository and can build the project with the Gradle wrapper without installing any new software. All dependencies are then downloaded automatically and the user can start working without caring about missing packages.
 The build process is defined in the build.gradle file which is located in the source directory of the project. 
 
-\subsection{Travic CI}
+\subsection{Travis CI}
 
-Travic CI is an open source build server. It is easy to use in combination with git. One only needs to add a configuration file in the source directory of the project and define the git repository. Afterwards the project is build for every change. If the build does not pass, a mail is sent to the user. The actual status of the build can be found under following link \url{https://travis-ci.org/heya87/pawiTwo}.
+Travis CI is an open source build server. It is easy to use in combination with Git. One only needs to add a configuration file in the source directory of the project and define the Git repository. Afterwards the project is build for every change. If the build does not pass, a mail is sent to the user. The actual status of the build can be found under following link \url{https://travis-ci.org/heya87/pawiTwo}.
 
 \subsection{JusText}
 
-An implementation of the JusText algorithm is available in Python. The ressources are available under following link \url{https://code.google.com/p/justext/}. There is no implementation in Java so for the first approach the python application is called from Java with a ProcessBuilder.
-The command to extract an HTML file with justext is very simple:
+An implementation of the JusText algorithm is available in Python. The resources are available under following link \url{https://code.google.com/p/justext/}. There is no implementation in Java so for the first approach the python application is called from Java with a ProcessBuilder.
+The command to extract an HTML file with JusText is very simple:
 
 \begin {lstlisting}
 justext -s English /path/page.html > cleaned-page.txt
@@ -215,7 +224,7 @@ An implementation of the Boilerpipe Algorithm is available in Java. The resource
 
 \subsection{diff-match-patch}
 
-The Java library diff-match-patch \cite{diffMatchPatch} is used to compare text files and find differences. For this file, it is used to extract the values TP, TN, FP, FN when comparing the actual content files with the outcome of the algorithms.
+The Java library diff-match-patch \cite{google:diffMatchPatch} is used to compare text files and find differences. For this file, it is used to extract the values TP, TN, FP, FN when comparing the actual content files with the outcome of the algorithms.
 
 
 \section{Physical view}

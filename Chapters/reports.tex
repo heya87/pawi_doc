@@ -1,0 +1,242 @@
+% Chapter Template
+
+\chapter{Milestone reports} % Main chapter title
+
+\label{Milestone reports} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{\emph{Milestone reports}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{MS 1 report}
+
+\subsection{Introduction}
+
+This document is a short report about the MS1 meeting. The meeting took place on the 1.10.2014.
+
+\subsection{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version & Date      & Change & Author \\ \hline
+    1.0    & 1.10.2014        & Setup document / text                                        & JR \\ \hline
+    1.1    & 22.10.2014        & forgot Manu!! / grammar / rework                                        & JR \\ \hline
+\end{tabular}
+
+
+\subsection{Attendees}
+\begin{itemize}
+\item Joel Rolli
+\item Michael Kaufmann
+\item Patrick Huber
+\item Patrik Lengacher
+\item Manuel Schneider
+\end{itemize}
+
+
+\subsection{Delivery objects}
+
+\begin{itemize}
+\item System specification
+\item Sketch software architecture
+\item Short presentation CI environment
+\item Draft risk evaluation
+\end{itemize}
+
+\subsection{Decisions}
+
+The risk evaluation and the CI environment are approved. 
+The evaluation of the text extraction was discussed again and it was decided that the evaluation is still done with Words instead of HTML blocks. Doing the evaluation with HTML blocks can still be done but is not part of the PAWI project and would be bonus content. 
+Furthermore it was decided that no handmade test data is needed and the data from cleanEval and Gold standard are used for this project.
+The draft of the software architecture is ok but needs to be digitalized.
+The software architecture needs to be extended with additional data about the analysis of the extracted data. Which means all the formula for TN, FP, TP, FN etc. needs to be defined.
+
+
+\subsection{Rework}
+
+Following rework needs to be done until the 5.10.2014
+
+\begin{itemize}
+\item Extended software specification
+\item Digital version of software architecture sketch
+\end{itemize}
+
+Update: The listed delivery objects were delivered and approved on the 5.10.2014.
+
+
+\section{MS2 meeting report}
+
+\subsection{Introduction}
+
+This document is a short report about the MS1 meeting. The meeting took place on the 24.10.2014.
+
+\subsection{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version 	& Date      		& Change & Author 								\\ \hline
+    0.1    		& 20.10.2014        & Setup document        				& JR 	\\ \hline
+    1.0 		& 27.10.2014 		& add meeting report 					& JR 	\\ \hline
+\end{tabular}
+
+
+\subsection{Attendees}
+\begin{itemize}
+\item Joel Rolli
+\item Michael Kaufmann
+\end{itemize}
+
+\subsection{Delivery objects}
+
+\begin{itemize}
+\item Elaborated software architecture
+\item Tested code of test framework (reader / writer)
+\item Interface definition for justext/boilerplate components
+\item HTML test data
+\end{itemize}
+
+
+\subsection{Decisions}
+
+All delivery objects are approved. We discussed the text comparison and came to a conclusion that I am going to search for diff tool libraries to do the comparison of text files. Mr. Kaufmann sent me some proposal later on.
+
+
+\subsection{Rework}
+
+There is no rework to do.
+The proposed diff tool libraries are
+
+\begin{itemize}
+\item https://code.google.com/p/google-diff-match-patch/
+\item https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/StringUtils.html
+\end{itemize}
+
+
+The next milestone, which is the implementation of the whole test framework and integration of justext and boilerpipe, is already achieved as well. We decided that MS3 is obsolete and we are going to meet again if there are any ambiguity and if there is not, for MS4.
+
+
+
+\section{MS4 meeting report}
+
+\label{ms4report}
+
+
+\subsection{Introduction}
+
+This document is a short report about the MS4 meeting. The meeting took place on the 21.11.2014.
+
+\subsection{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version 	& Date      		& Change & Author 								\\ \hline
+    0.1    		& 21.11.2014        & Setup document        				& JR 	\\ \hline
+    1.0 		& 21.11.2014 		& add meeting report 					& JR 	\\ \hline
+\end{tabular}
+
+
+\subsection{Attendees}
+\begin{itemize}
+\item Joel Rolli
+\item Michael Kaufmann
+\item Patrick Lengacher
+\end{itemize}
+
+\subsection{Delivery objects}
+
+\begin{itemize}
+\item Evaluation environment for output data of test framework
+
+\item First approach to new algorithm
+
+\item Interface definition for justext/boilerplate components
+\item HTML test data
+\end{itemize}
+
+
+\subsection{Decisions}
+
+All delivery objects are approved. A first draft of the final documentation was reviewed
+by Mr. Kaufmann. The structure is good in general. However some chapters are
+renamed and it was decided that the project documents belong into the appendix and
+are not integrated into the main report.
+Furthermore, the statistical results which were produced with the application were re-
+viewed and some parts of the source code were presented. We decided that implementing
+an extra algorithm is too time consuming for the time left and that the focus for the
+last milestone is on the documentation, the analysis of the existing algorithms and im-
+provement of the existing work.
+One more point was discussed concerning the javadoc. There is no need to do javadoc
+for each method. It is ok to do javadoc for the important classes and methods.
+We decided that the final presentation is held on the 11. December if everyone (Michael
+Kaufmann, Patrick Huber, Patrick Lengacher, Manuel Schneider) is free on this day.
+
+\subsection{Rework}
+
+No rework needs to be done.p
+
+
+\section{MS4 meeting report}
+
+\label{ms4report}
+
+
+\subsection{Introduction}
+
+This document is a short report about the MS4 meeting. The meeting took place on the 21.11.2014.
+
+\subsection{Version}
+
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version 	& Date      		& Change & Author 								\\ \hline
+    0.1    		& 13.12.2014        & Setup document        				& JR 	\\ \hline
+    1.0 		& 13.12.2014 		& add meeting report 					& JR 	\\ \hline
+\end{tabular}
+
+
+\subsection{Attendees}
+\begin{itemize}
+\item Joel Rolli
+\item Michael Kaufmann
+\end{itemize}
+
+\subsection{Delivery objects}
+
+\begin{itemize}
+    \item Implementation of new algorithm
+    \item Complete documentation
+    \item Prepare final presentation
+\end{itemize}
+
+Note: Since the deadline as well as the presentation date has changed, these delivery objects were not valid anymore.
+
+\subsection{Topics}
+
+The main part of the documentation was discussed. Following changes were proposed by Mr. Kaufmann.
+
+\begin{itemize}
+\item Add a list of goals to the problem statement
+\item Make the 'Advertisement' more clear
+\item Mention that JusText did actually perform better then Boilerpipe
+\item It is perfectly fine to use i/we for this work
+\end{itemize}
+
+\subsection{Rework}
+
+Adapt documentation accordingly.
+
+
+
+
+
+
+
+
+
+

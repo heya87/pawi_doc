@@ -40,7 +40,10 @@
 \usepackage{longtable}
 \usepackage{xr}
 \usepackage{textcomp}
-
+\usepackage{caption}
+\usepackage[english]{babel}
+\usepackage{amssymb,amsmath,amsxtra,amsthm,amsfonts}
+\usepackage{tocloft}
 
  % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
@@ -91,14 +94,11 @@
 \begin{flushright} \large
 \emph{Supervisors:} \\
 {\supname} \linebreak \linebreak  % Supervisor name - remove the \href bracket to remove the link  
-\emph{Examiner:} \\
+\emph{Examiners:} \\
 {\examname}\\
 \end{flushright}
 \end{minipage}\\[3cm]
  
-\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
-\textit{in the}\\[0.4cm]
-\groupname\\\deptname\\[2cm] % Research group name and department name
  
 {\large \today}\\[4cm] % Date
 %\includegraphics{Logo} % University/department logo - uncomment to place it
@@ -146,7 +146,13 @@ Date:\\
 
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-TBD \ldots
+TODOs:
+\begin{itemize}
+\item abstract
+\item check for forgotten cites
+\item ask lengi why this stupid list of table/figure is not working
+
+\end{itemize}
 }
 
 \clearpage % Start a new page
@@ -172,11 +178,16 @@ TBD \ldots
 \lhead{\emph{Contents}} % Set the left side page header to "Contents"
 \tableofcontents % Write out the Table of Contents
 
+
+\pagebreak
 \lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
 \listoffigures % Write out the List of Figures
+\thispagestyle{empty}
 
+\pagebreak
 \lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
 \listoftables % Write out the List of Tables
+\thispagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 %	ABBREVIATIONS
@@ -198,6 +209,7 @@ TBD \ldots
 \textbf{FP} & \textbf{F}alse \textbf{P}ositive \\
 \textbf{FN} & \textbf{F}alse \textbf{N}egative \\
 \textbf{TV} & \textbf{T}ele\textbf{V}ision \\
+\textbf{IDE} & \textbf{I}ntegrated \textbf{D}evelopment \textbf{E}nvironment \\
 \textbf{CI}  & \textbf{C}ontinuous \textbf{I}ntegration \\
 \textbf{RSS}  & \textbf{R}ich \textbf{S}ide \textbf{S}ummary \\
 \textbf{API}  & \textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface \\
@@ -210,8 +222,6 @@ TBD \ldots
 \textbf{CSV} & \textbf{C}omma \textbf{S}separated \textbf{V}alues \\
 \textbf{DSL} & \textbf{D}omain \textbf{S}pecific \textbf{L}anguage \\
 \textbf{XML} & E\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage\\
-\textbf{JR}  & \textbf{J}oel \textbf{R}olli\\
-%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 }
 
 
@@ -242,15 +252,6 @@ TBD \ldots
 \input{Chapters/problemStatement}
 \input{Chapters/solutionDevelopment}
 \input{Chapters/Conclusion}
-%\input{Chapters/Chapter4} 
-%\input{Chapters/Chapter5} 
-%\input{Chapters/Chapter6} 
-%\input{Chapters/Chapter10}
-%\input{Chapters/Chapter11}
-%\input{Chapters/planning}
-%\input{Chapters/sysspec}
-%\input{Chapters/risk_analysis}
-%\input{Chapters/architecture}
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
@@ -276,11 +277,8 @@ TBD \ldots
 \input{Chapters/testplan}
 \input{Chapters/testprotocol}
 \input{Chapters/usermanual}
-\input{Chapters/MS1report}
-\input{Chapters/MS2report}
-\input{Chapters/MS4report}
-%\input{Appendices/AppendixB}
-%\input{Appendices/AppendixC}
+\input{Chapters/reports}
+\input{Chapters/exampleResultsInspect}
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
@@ -291,8 +289,6 @@ TBD \ldots
 %----------------------------------------------------------------------------------------
 
 \label{Bibliography}
-
-\cite{Reference1}
 
 \lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
 

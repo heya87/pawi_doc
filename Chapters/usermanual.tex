@@ -8,6 +8,16 @@
 
 %----------------------------------------------------------------------------------------
 
+\section{Version}
+
+\begin{tabular}{| p{1.5cm} | p{2cm} | p{9cm} | p{1.5cm} |}
+    \hline
+    Version & Date      & Change & Author \\ \hline
+    0.1     & 8.12.2014        & Setup document                                        & JR \\ \hline
+    0.2     & 8.12.2014        & Write user manual                                        & JR \\ \hline
+    1.0     & 20.10.2014        & Grammar / Formatting                                       & JR \\ \hline
+\end{tabular}
+
 \section{Introduction}
 
 This document describes how to install and use the content extraction test framework.
@@ -173,18 +183,18 @@ filter:justext:precision:max:0.5;
 \begin{enumerate}
 \item Put the content files into following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/content
 \item Put the HTML files into following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/html
-\item Adjust the configuration file to you wishes. The configuration is located at: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/config.txt
+\item Adjust the configuration file to you wishes. The configuration is located at: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/config/config.txt
 \item Run the test with the gradle wrapper.
 
 \begin{lstlisting}
 ./gradlew run
 \end{lstlisting}
-\item Find the results in the output folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}build/resources/main/
+\item Find the results in the output folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}build/resources/main/results/
 \end{enumerate}
 
 \subsection{Results}
 
-After running a test multiple result files are generated and written in following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/
+After running a test multiple result files are generated and written in following folder: {\raise.17ex\hbox{$\scriptstyle\sim$}}/build/resources/main/results/
 
 The different result files are:
 \begin{itemize}

@@ -1,38 +1,37 @@
+\select@language {english}
 \contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}
 \vspace {1em}
 \contentsline {chapter}{Abstract}{ii}{dummy.2}
 \vspace {1em}
-\contentsline {chapter}{Contents}{iii}{dummy.3}
-\contentsline {chapter}{List of Figures}{v}{dummy.5}
-\contentsline {chapter}{List of Tables}{vi}{dummy.7}
-\contentsline {chapter}{Abbreviations}{vii}{dummy.9}
+\contentsline {chapter}{Abbreviations}{vii}{dummy.3}
 \vspace {2em}
-\contentsline {chapter}{\numberline {1}Problem statement}{1}{chapter.12}
-\contentsline {section}{\numberline {1.1}Introduction}{1}{section.13}
-\contentsline {section}{\numberline {1.2}Task}{1}{section.14}
-\contentsline {section}{\numberline {1.3}Text extraction and algorithms}{2}{section.15}
-\contentsline {subsection}{\numberline {1.3.1}Text extraction}{2}{subsection.16}
-\contentsline {subsection}{\numberline {1.3.2}Boilerpipe}{2}{subsection.17}
-\contentsline {subsection}{\numberline {1.3.3}JusText}{2}{subsection.18}
-\contentsline {subsection}{\numberline {1.3.4}Classification}{3}{subsection.19}
-\contentsline {section}{\numberline {1.4}Goals}{3}{section.21}
-\contentsline {section}{\numberline {1.5}Summary}{4}{section.22}
-\contentsline {chapter}{\numberline {2}Solution development}{5}{chapter.23}
-\contentsline {section}{\numberline {2.1}Approach}{5}{section.24}
-\contentsline {subsection}{\numberline {2.1.1}Planning}{5}{subsection.25}
-\contentsline {subsection}{\numberline {2.1.2}Programming}{6}{subsection.26}
-\contentsline {subsection}{\numberline {2.1.3}Modification JusText}{7}{subsection.27}
-\contentsline {subsection}{\numberline {2.1.4}Modification Boilerpipe}{8}{subsection.31}
-\contentsline {section}{\numberline {2.2}Results}{8}{section.32}
-\contentsline {subsection}{\numberline {2.2.1}Statistical data}{8}{subsection.33}
-\contentsline {subsection}{\numberline {2.2.2}Analysis}{8}{subsection.34}
-\contentsline {subsection}{\numberline {2.2.3}Detailed analysis}{10}{subsection.39}
-\contentsline {chapter}{\numberline {3}Discussion and Outlook}{12}{chapter.48}
-\contentsline {section}{\numberline {3.1}Conclusion}{12}{section.49}
-\contentsline {section}{\numberline {3.2}Lessons learned}{12}{section.50}
-\contentsline {subsection}{\numberline {3.2.1}Planning}{12}{subsection.51}
-\contentsline {subsection}{\numberline {3.2.2}Programming}{13}{subsection.52}
-\contentsline {section}{\numberline {3.3}Further work}{13}{section.53}
+\contentsline {chapter}{\numberline {1}Problem statement}{1}{chapter.6}
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.7}
+\contentsline {section}{\numberline {1.2}Task}{1}{section.8}
+\contentsline {section}{\numberline {1.3}Text extraction and algorithms}{2}{section.9}
+\contentsline {subsection}{\numberline {1.3.1}Text extraction}{2}{subsection.10}
+\contentsline {subsection}{\numberline {1.3.2}Boilerpipe}{2}{subsection.11}
+\contentsline {subsection}{\numberline {1.3.3}JusText}{2}{subsection.12}
+\contentsline {subsection}{\numberline {1.3.4}Classification}{3}{subsection.13}
+\contentsline {section}{\numberline {1.4}Goals}{3}{section.15}
+\contentsline {chapter}{\numberline {2}Solution development}{5}{chapter.16}
+\contentsline {section}{\numberline {2.1}Approach}{5}{section.17}
+\contentsline {subsection}{\numberline {2.1.1}Planning}{5}{subsection.18}
+\contentsline {subsection}{\numberline {2.1.2}Programming}{6}{subsection.19}
+\contentsline {subsection}{\numberline {2.1.3}Filtering results}{7}{subsection.20}
+\contentsline {subsection}{\numberline {2.1.4}Evaluation based on blocks}{8}{subsection.24}
+\contentsline {subsubsection}{\numberline {2.1.4.1}Modification JusText}{8}{subsubsection.25}
+\contentsline {subsubsection}{\numberline {2.1.4.2}Modification Boilerpipe}{9}{subsubsection.29}
+\contentsline {section}{\numberline {2.2}Results}{9}{section.30}
+\contentsline {subsection}{\numberline {2.2.1}Statistical data}{9}{subsection.31}
+\contentsline {subsection}{\numberline {2.2.2}Analysis}{9}{subsection.32}
+\contentsline {subsection}{\numberline {2.2.3}Detailed analysis}{11}{subsection.37}
+\contentsline {chapter}{\numberline {3}Discussion and Outlook}{13}{chapter.48}
+\contentsline {section}{\numberline {3.1}Conclusion}{13}{section.49}
+\contentsline {section}{\numberline {3.2}Lessons learned}{13}{section.50}
+\contentsline {subsection}{\numberline {3.2.1}Planning}{13}{subsection.51}
+\contentsline {subsection}{\numberline {3.2.2}Programming}{14}{subsection.52}
+\contentsline {section}{\numberline {3.3}Further work}{14}{section.53}
 \vspace {2em}
 \contentsline {chapter}{Appendices}{1}{section.53}
 \setcounter {tocdepth}{0}
@@ -62,105 +61,126 @@
 \contentsline {subsection}{\numberline {B.3.3}Integration Boilerpipe}{14}{subsection.77}
 \contentsline {subsection}{\numberline {B.3.4}Integration Justext}{14}{subsection.78}
 \contentsline {subsection}{\numberline {B.3.5}Implementation RSS algorithm}{14}{subsection.79}
-\contentsline {section}{\numberline {B.4}Assessment of risks}{14}{section.80}
-\contentsline {section}{\numberline {B.5}Consequences}{15}{section.82}
-\contentsline {subsection}{\numberline {B.5.1}Unclear requirements}{15}{subsection.83}
-\contentsline {subsection}{\numberline {B.5.2}New technologies}{15}{subsection.84}
-\contentsline {subsection}{\numberline {B.5.3}Integration Boilerpipe}{15}{subsection.85}
-\contentsline {subsection}{\numberline {B.5.4}Integration Justext}{15}{subsection.86}
-\contentsline {subsection}{\numberline {B.5.5}Implementation RSS algorithm}{16}{subsection.87}
-\contentsline {chapter}{\numberline {C}Software Requirement Specification}{17}{appendix.88}
-\contentsline {section}{\numberline {C.1}Version}{17}{section.89}
-\contentsline {section}{\numberline {C.2}Introduction}{17}{section.90}
-\contentsline {subsection}{\numberline {C.2.1}Purpose}{17}{subsection.91}
-\contentsline {subsection}{\numberline {C.2.2}Scope}{18}{subsection.92}
-\contentsline {section}{\numberline {C.3}General description}{18}{section.93}
-\contentsline {subsection}{\numberline {C.3.1}Operating Environment}{18}{subsection.94}
-\contentsline {subsubsection}{\numberline {C.3.1.1}Local environment}{18}{subsubsection.95}
-\contentsline {subsubsection}{\numberline {C.3.1.2}Continuous Integration Environment}{18}{subsubsection.96}
-\contentsline {subsection}{\numberline {C.3.2}Design and Implementation Constraints}{18}{subsection.97}
-\contentsline {subsubsection}{\numberline {C.3.2.1}User interface}{18}{subsubsection.98}
-\contentsline {section}{\numberline {C.4}System Features}{19}{section.99}
-\contentsline {subsection}{\numberline {C.4.1}Basic functionality}{20}{subsection.100}
-\contentsline {subsection}{\numberline {C.4.2}Overview}{21}{subsection.101}
-\contentsline {subsubsection}{\numberline {C.4.2.1}Read configuration}{21}{subsubsection.102}
-\contentsline {subsubsection}{\numberline {C.4.2.2}Create test}{22}{subsubsection.107}
-\contentsline {subsubsection}{\numberline {C.4.2.3}Integration JusText algorithm}{22}{subsubsection.108}
-\contentsline {subsubsection}{\numberline {C.4.2.4}Integration Boilerpipe algorithm}{22}{subsubsection.109}
-\contentsline {subsubsection}{\numberline {C.4.2.5}Evaluation and Implementation RSS feed algorithm}{23}{subsubsection.110}
-\contentsline {subsubsection}{\numberline {C.4.2.6}Evaluation of classification text}{23}{subsubsection.111}
-\contentsline {subsubsection}{\numberline {C.4.2.7}Evaluation of classification blocks}{24}{subsubsection.112}
-\contentsline {subsection}{\numberline {C.4.3}Analyze data}{24}{subsection.113}
-\contentsline {subsection}{\numberline {C.4.4}Evaluation of classification}{24}{subsection.114}
-\contentsline {subsection}{\numberline {C.4.5}Analytical values}{25}{subsection.118}
-\contentsline {section}{\numberline {C.5}External Interface Requirements}{26}{section.123}
-\contentsline {subsection}{\numberline {C.5.1}Boilerpipe}{26}{subsection.124}
-\contentsline {subsection}{\numberline {C.5.2}JusText}{26}{subsection.125}
-\contentsline {chapter}{\numberline {D}Software Architecture}{27}{appendix.126}
-\contentsline {section}{\numberline {D.1}Version}{27}{section.127}
-\contentsline {section}{\numberline {D.2}Introduction}{27}{section.128}
-\contentsline {section}{\numberline {D.3}System Overview}{28}{section.129}
-\contentsline {section}{\numberline {D.4}Logical view}{29}{section.130}
-\contentsline {subsection}{\numberline {D.4.1}Data model}{29}{subsection.131}
-\contentsline {subsection}{\numberline {D.4.2}TestCase}{29}{subsection.132}
-\contentsline {subsection}{\numberline {D.4.3}HtmlFile}{29}{subsection.133}
-\contentsline {subsection}{\numberline {D.4.4}ContentFile}{29}{subsection.134}
-\contentsline {subsection}{\numberline {D.4.5}ExctractedContent}{30}{subsection.135}
-\contentsline {subsection}{\numberline {D.4.6}Result}{30}{subsection.136}
-\contentsline {subsection}{\numberline {D.4.7}Business Logic}{31}{subsection.137}
-\contentsline {subsection}{\numberline {D.4.8}Description of single classes}{32}{subsection.138}
-\contentsline {section}{\numberline {D.5}Process view}{34}{section.140}
-\contentsline {section}{\numberline {D.6}Development view}{35}{section.141}
-\contentsline {subsection}{\numberline {D.6.1}Continuous Integration Process}{35}{subsection.142}
-\contentsline {subsection}{\numberline {D.6.2}git}{35}{subsection.143}
-\contentsline {subsection}{\numberline {D.6.3}Gradle}{36}{subsection.144}
-\contentsline {subsection}{\numberline {D.6.4}Travic CI}{36}{subsection.145}
-\contentsline {subsection}{\numberline {D.6.5}JusText}{36}{subsection.146}
-\contentsline {subsection}{\numberline {D.6.6}Boilerpipe}{37}{subsection.149}
-\contentsline {subsection}{\numberline {D.6.7}diff-match-patch}{37}{subsection.150}
-\contentsline {section}{\numberline {D.7}Physical view}{37}{section.151}
-\contentsline {chapter}{\numberline {E}Test plan}{38}{appendix.152}
-\contentsline {section}{\numberline {E.1}Introduction}{38}{section.153}
-\contentsline {subsection}{\numberline {E.1.1}Test concept}{38}{subsection.154}
-\contentsline {subsection}{\numberline {E.1.2}Test cases}{38}{subsection.155}
-\contentsline {chapter}{\numberline {F}Test protocol}{43}{appendix.184}
-\contentsline {section}{\numberline {F.1}Introduction}{43}{section.185}
-\contentsline {subsection}{\numberline {F.1.1}Test run one}{43}{subsection.186}
-\contentsline {subsection}{\numberline {F.1.2}Test run two}{44}{subsection.187}
-\contentsline {subsection}{\numberline {F.1.3}Test run three}{44}{subsection.188}
-\contentsline {chapter}{\numberline {G}User manual}{45}{appendix.189}
-\contentsline {section}{\numberline {G.1}Introduction}{45}{section.190}
-\contentsline {section}{\numberline {G.2}System requirements}{45}{section.191}
-\contentsline {section}{\numberline {G.3}Installation}{45}{section.192}
-\contentsline {subsection}{\numberline {G.3.1}Installation JusText}{46}{subsection.200}
-\contentsline {section}{\numberline {G.4}Configuration \& Usage}{46}{section.212}
-\contentsline {subsection}{\numberline {G.4.1}Configuration}{46}{subsection.213}
-\contentsline {subsubsection}{\numberline {G.4.1.1}Classifier}{46}{subsubsection.214}
-\contentsline {subsubsection}{\numberline {G.4.1.2}Language}{47}{subsubsection.219}
-\contentsline {subsubsection}{\numberline {G.4.1.3}Inspect}{47}{subsubsection.224}
-\contentsline {subsubsection}{\numberline {G.4.1.4}Filter}{47}{subsubsection.227}
-\contentsline {subsection}{\numberline {G.4.2}Run a test}{48}{subsection.230}
-\contentsline {subsection}{\numberline {G.4.3}Results}{49}{subsection.238}
-\contentsline {chapter}{\numberline {H}MS1 meeting report}{50}{appendix.239}
-\contentsline {section}{\numberline {H.1}Introduction}{50}{section.240}
-\contentsline {section}{\numberline {H.2}Version}{50}{section.241}
-\contentsline {section}{\numberline {H.3}Attendees}{50}{section.242}
-\contentsline {section}{\numberline {H.4}Delivery objects}{50}{section.243}
-\contentsline {section}{\numberline {H.5}Decisions}{51}{section.244}
-\contentsline {section}{\numberline {H.6}Rework}{51}{section.245}
-\contentsline {chapter}{\numberline {I}MS2 meeting report}{52}{appendix.246}
-\contentsline {section}{\numberline {I.1}Introduction}{52}{section.247}
-\contentsline {section}{\numberline {I.2}Version}{52}{section.248}
-\contentsline {section}{\numberline {I.3}Attendees}{52}{section.249}
-\contentsline {section}{\numberline {I.4}Delivery objects}{52}{section.250}
-\contentsline {section}{\numberline {I.5}Decisions}{53}{section.251}
-\contentsline {section}{\numberline {I.6}Rework}{53}{section.252}
-\contentsline {chapter}{\numberline {J}MS4 meeting report}{54}{appendix.253}
-\contentsline {section}{\numberline {J.1}Introduction}{54}{section.254}
-\contentsline {section}{\numberline {J.2}Version}{54}{section.255}
-\contentsline {section}{\numberline {J.3}Attendees}{54}{section.256}
-\contentsline {section}{\numberline {J.4}Delivery objects}{54}{section.257}
-\contentsline {section}{\numberline {J.5}Decisions}{55}{section.258}
-\contentsline {section}{\numberline {J.6}Rework}{55}{section.259}
-\vspace {2em}
-\contentsline {chapter}{Bibliography}{56}{dummy.260}
+\contentsline {subsection}{\numberline {B.3.6}Comparison text files}{14}{subsection.80}
+\contentsline {section}{\numberline {B.4}Assessment of risks}{15}{section.81}
+\contentsline {section}{\numberline {B.5}Consequences}{15}{section.83}
+\contentsline {subsection}{\numberline {B.5.1}Unclear requirements}{15}{subsection.84}
+\contentsline {subsection}{\numberline {B.5.2}New technologies}{15}{subsection.85}
+\contentsline {subsection}{\numberline {B.5.3}Integration Boilerpipe}{15}{subsection.86}
+\contentsline {subsection}{\numberline {B.5.4}Integration Justext}{16}{subsection.87}
+\contentsline {subsection}{\numberline {B.5.5}Implementation RSS algorithm}{16}{subsection.88}
+\contentsline {subsection}{\numberline {B.5.6}Comparison text files}{16}{subsection.89}
+\contentsline {chapter}{\numberline {C}Software Requirement Specification}{17}{appendix.90}
+\contentsline {section}{\numberline {C.1}Version}{17}{section.91}
+\contentsline {section}{\numberline {C.2}Introduction}{17}{section.92}
+\contentsline {subsection}{\numberline {C.2.1}Purpose}{17}{subsection.93}
+\contentsline {subsection}{\numberline {C.2.2}Scope}{18}{subsection.94}
+\contentsline {section}{\numberline {C.3}General description}{18}{section.95}
+\contentsline {subsection}{\numberline {C.3.1}Operating Environment}{18}{subsection.96}
+\contentsline {subsubsection}{\numberline {C.3.1.1}Local environment}{18}{subsubsection.97}
+\contentsline {subsubsection}{\numberline {C.3.1.2}Continuous Integration Environment}{18}{subsubsection.98}
+\contentsline {subsection}{\numberline {C.3.2}Design and Implementation Constraints}{18}{subsection.99}
+\contentsline {subsubsection}{\numberline {C.3.2.1}User interface}{18}{subsubsection.100}
+\contentsline {section}{\numberline {C.4}System Features}{19}{section.101}
+\contentsline {subsection}{\numberline {C.4.1}Basic functionality}{20}{subsection.102}
+\contentsline {subsection}{\numberline {C.4.2}Overview}{21}{subsection.103}
+\contentsline {subsection}{\numberline {C.4.3}Filter results}{22}{subsection.104}
+\contentsline {subsection}{\numberline {C.4.4}Inspect single test case}{22}{subsection.105}
+\contentsline {subsubsection}{\numberline {C.4.4.1}Read configuration}{22}{subsubsection.106}
+\contentsline {subsubsection}{\numberline {C.4.4.2}Create test}{22}{subsubsection.111}
+\contentsline {subsubsection}{\numberline {C.4.4.3}Integration JusText algorithm}{23}{subsubsection.112}
+\contentsline {subsubsection}{\numberline {C.4.4.4}Integration Boilerpipe algorithm}{23}{subsubsection.113}
+\contentsline {subsubsection}{\numberline {C.4.4.5}Evaluation and Implementation RSS feed algorithm}{23}{subsubsection.114}
+\contentsline {subsubsection}{\numberline {C.4.4.6}Evaluation of classification text}{24}{subsubsection.115}
+\contentsline {subsubsection}{\numberline {C.4.4.7}Evaluation of classification blocks}{24}{subsubsection.116}
+\contentsline {subsubsection}{\numberline {C.4.4.8}Analyze data}{25}{subsubsection.117}
+\contentsline {subsubsection}{\numberline {C.4.4.9}Filter results}{25}{subsubsection.118}
+\contentsline {subsubsection}{\numberline {C.4.4.10}Inspect single test case}{26}{subsubsection.121}
+\contentsline {subsection}{\numberline {C.4.5}Evaluation of classification}{26}{subsection.124}
+\contentsline {subsection}{\numberline {C.4.6}Analytical values}{27}{subsection.128}
+\contentsline {section}{\numberline {C.5}External Interface Requirements}{28}{section.133}
+\contentsline {subsection}{\numberline {C.5.1}Boilerpipe}{28}{subsection.134}
+\contentsline {subsection}{\numberline {C.5.2}JusText}{28}{subsection.135}
+\contentsline {chapter}{\numberline {D}Software Architecture}{29}{appendix.136}
+\contentsline {section}{\numberline {D.1}Version}{29}{section.137}
+\contentsline {section}{\numberline {D.2}Introduction}{29}{section.138}
+\contentsline {section}{\numberline {D.3}System Overview}{30}{section.139}
+\contentsline {section}{\numberline {D.4}Logical view}{31}{section.141}
+\contentsline {subsection}{\numberline {D.4.1}Data model}{31}{subsection.142}
+\contentsline {subsection}{\numberline {D.4.2}TestCase}{31}{subsection.143}
+\contentsline {subsection}{\numberline {D.4.3}HtmlFile}{31}{subsection.144}
+\contentsline {subsection}{\numberline {D.4.4}ContentFile}{31}{subsection.145}
+\contentsline {subsection}{\numberline {D.4.5}ExctractedContent}{32}{subsection.146}
+\contentsline {subsection}{\numberline {D.4.6}Result}{32}{subsection.147}
+\contentsline {subsection}{\numberline {D.4.7}Config}{32}{subsection.148}
+\contentsline {subsection}{\numberline {D.4.8}Business Logic}{33}{subsection.149}
+\contentsline {subsection}{\numberline {D.4.9}Description of single classes}{34}{subsection.150}
+\contentsline {section}{\numberline {D.5}Process view}{36}{section.152}
+\contentsline {section}{\numberline {D.6}Development view}{37}{section.153}
+\contentsline {subsection}{\numberline {D.6.1}Continuous Integration Process}{37}{subsection.154}
+\contentsline {subsection}{\numberline {D.6.2}Git}{37}{subsection.155}
+\contentsline {subsection}{\numberline {D.6.3}Gradle}{38}{subsection.156}
+\contentsline {subsection}{\numberline {D.6.4}Travis CI}{38}{subsection.157}
+\contentsline {subsection}{\numberline {D.6.5}JusText}{38}{subsection.158}
+\contentsline {subsection}{\numberline {D.6.6}Boilerpipe}{39}{subsection.161}
+\contentsline {subsection}{\numberline {D.6.7}diff-match-patch}{39}{subsection.162}
+\contentsline {section}{\numberline {D.7}Physical view}{39}{section.163}
+\contentsline {chapter}{\numberline {E}Test plan}{40}{appendix.164}
+\contentsline {section}{\numberline {E.1}Version}{40}{section.165}
+\contentsline {section}{\numberline {E.2}Introduction}{40}{section.166}
+\contentsline {subsection}{\numberline {E.2.1}Test concept}{40}{subsection.167}
+\contentsline {subsection}{\numberline {E.2.2}Test cases}{41}{subsection.168}
+\contentsline {chapter}{\numberline {F}Test protocol}{46}{appendix.198}
+\contentsline {section}{\numberline {F.1}Version}{46}{section.199}
+\contentsline {section}{\numberline {F.2}Introduction}{46}{section.200}
+\contentsline {subsection}{\numberline {F.2.1}Test run one}{46}{subsection.201}
+\contentsline {subsection}{\numberline {F.2.2}Test run two}{47}{subsection.202}
+\contentsline {subsection}{\numberline {F.2.3}Test run three}{47}{subsection.203}
+\contentsline {chapter}{\numberline {G}User manual}{49}{appendix.204}
+\contentsline {section}{\numberline {G.1}Version}{49}{section.205}
+\contentsline {section}{\numberline {G.2}Introduction}{49}{section.206}
+\contentsline {section}{\numberline {G.3}System requirements}{49}{section.207}
+\contentsline {section}{\numberline {G.4}Installation}{49}{section.208}
+\contentsline {subsection}{\numberline {G.4.1}Installation JusText}{50}{subsection.216}
+\contentsline {section}{\numberline {G.5}Configuration \& Usage}{50}{section.228}
+\contentsline {subsection}{\numberline {G.5.1}Configuration}{50}{subsection.229}
+\contentsline {subsubsection}{\numberline {G.5.1.1}Classifier}{51}{subsubsection.230}
+\contentsline {subsubsection}{\numberline {G.5.1.2}Language}{51}{subsubsection.235}
+\contentsline {subsubsection}{\numberline {G.5.1.3}Inspect}{51}{subsubsection.240}
+\contentsline {subsubsection}{\numberline {G.5.1.4}Filter}{52}{subsubsection.243}
+\contentsline {subsection}{\numberline {G.5.2}Run a test}{53}{subsection.246}
+\contentsline {subsection}{\numberline {G.5.3}Results}{53}{subsection.254}
+\contentsline {chapter}{\numberline {H}Milestone reports}{54}{appendix.255}
+\contentsline {section}{\numberline {H.1}MS 1 report}{54}{section.256}
+\contentsline {subsection}{\numberline {H.1.1}Introduction}{54}{subsection.257}
+\contentsline {subsection}{\numberline {H.1.2}Version}{54}{subsection.258}
+\contentsline {subsection}{\numberline {H.1.3}Attendees}{54}{subsection.259}
+\contentsline {subsection}{\numberline {H.1.4}Delivery objects}{55}{subsection.260}
+\contentsline {subsection}{\numberline {H.1.5}Decisions}{55}{subsection.261}
+\contentsline {subsection}{\numberline {H.1.6}Rework}{55}{subsection.262}
+\contentsline {section}{\numberline {H.2}MS2 meeting report}{55}{section.263}
+\contentsline {subsection}{\numberline {H.2.1}Introduction}{55}{subsection.264}
+\contentsline {subsection}{\numberline {H.2.2}Version}{56}{subsection.265}
+\contentsline {subsection}{\numberline {H.2.3}Attendees}{56}{subsection.266}
+\contentsline {subsection}{\numberline {H.2.4}Delivery objects}{56}{subsection.267}
+\contentsline {subsection}{\numberline {H.2.5}Decisions}{56}{subsection.268}
+\contentsline {subsection}{\numberline {H.2.6}Rework}{56}{subsection.269}
+\contentsline {section}{\numberline {H.3}MS4 meeting report}{57}{section.270}
+\contentsline {subsection}{\numberline {H.3.1}Introduction}{57}{subsection.271}
+\contentsline {subsection}{\numberline {H.3.2}Version}{57}{subsection.272}
+\contentsline {subsection}{\numberline {H.3.3}Attendees}{57}{subsection.273}
+\contentsline {subsection}{\numberline {H.3.4}Delivery objects}{57}{subsection.274}
+\contentsline {subsection}{\numberline {H.3.5}Decisions}{57}{subsection.275}
+\contentsline {subsection}{\numberline {H.3.6}Rework}{58}{subsection.276}
+\contentsline {section}{\numberline {H.4}MS4 meeting report}{58}{section.277}
+\contentsline {subsection}{\numberline {H.4.1}Introduction}{58}{subsection.278}
+\contentsline {subsection}{\numberline {H.4.2}Version}{58}{subsection.279}
+\contentsline {subsection}{\numberline {H.4.3}Attendees}{58}{subsection.280}
+\contentsline {subsection}{\numberline {H.4.4}Delivery objects}{58}{subsection.281}
+\contentsline {subsection}{\numberline {H.4.5}Topics}{59}{subsection.282}
+\contentsline {subsection}{\numberline {H.4.6}Rework}{59}{subsection.283}
+\contentsline {chapter}{\numberline {I}Examples result files}{60}{appendix.284}
+\contentsline {section}{\numberline {I.1}Introduction}{60}{section.285}
+\contentsline {section}{\numberline {I.2}Results single test}{60}{section.286}
+\contentsline {section}{\numberline {I.3}Results overall}{62}{section.343}
+\contentsline {section}{\numberline {I.4}Results detailed}{62}{section.348}

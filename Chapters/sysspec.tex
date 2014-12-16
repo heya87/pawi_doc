@@ -21,7 +21,8 @@
 	0.4 	& 02.10.2014		& Add overview of application/evaluation			& JR \\ \hline
 	0.5 	& 04.10.2014		& Corrections evaluation 							& JR \\ \hline
 	1.0 	& 05.10.2014		& Grammar, layout 									& JR \\ \hline
-	1.1 	& 20.11.2014		& Fix FN definition									& JR \\ \hline
+	1.1 	& 20.10.2014		& Fix FN definition									& JR \\ \hline
+	1.2 	& 23.11.2014		& Add new features filter, inspect test case		& JR \\ \hline
 
 \end{tabular}
 
@@ -82,7 +83,7 @@ The operation environment for the text extraction framework is defined in this s
 \subsection{Design and Implementation Constraints}
 
 \subsubsection{User interface}
-As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed. \cite{Reference1} \cite{CLEANEVAL:online}
+As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed.
 
 
 \section{System Features}
@@ -117,7 +118,14 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	f6  		& Evaluation of classification text 				& \ref{subsec:Evaluation of classification text}				& needed 				\\ \hline
 	f7  		& Evaluation of classification blocks 				& \ref{subsec:Evaluation of classification blocks}	  			& nice to have			\\ \hline
 	f8  		& Analyze data 										& \ref{subsec:Analyze data}										& needed 				\\ \hline
+	f9  		& Filter results									& \ref{subsec:Filter results}									& nice to have \\ \hline
+	f10  		& Inspect single test case							& \ref{subsec:Inspect single test case}							& nice to have\\ \hline
 	\end{tabular} \\
+
+\subsection{Filter results}
+
+
+\subsection{Inspect single test case}
 
 
 
@@ -152,7 +160,6 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{Feature id} 		& f2 \\ \hline
 	\textbf{Description} 		& A test contains two input files which are an HTML file and a text file. They are located in the directories defined by the configuration. As soon as the test framework finds an HTML and a text file with the same name, the files are read and the test is started.\\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 \subsubsection{Integration JusText algorithm}
@@ -164,7 +171,6 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{Feature id} 		& f3 \\ \hline
 	\textbf{Description} 		& JusText is implemented in python. That is the reason why a service is needed to call the python script and get the extracted text or the extracted blocks.\\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 \subsubsection{Integration Boilerpipe algorithm}
@@ -176,7 +182,6 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{Feature id} 		& f4 \\ \hline
 	\textbf{Description} 		& Boilerplate is implemented in Java. An interfae is needed in order to call the Boilerplate component and get the extracted text or the extracted blocks.\\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 \subsubsection{Evaluation and Implementation RSS feed algorithm}
@@ -188,7 +193,6 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\textbf{Feature id} 		& f5 \\ \hline
 	\textbf{Description} 		& The basic idea of the RSS feed algorithm is to match the content of an HTML document with the related RSS feed and in doing so, define the relevant content. This needs to be evaluated, implemented and integrated into the text extraction framework.  \\ \hline
 	\textbf{Relevance} 			& nice to have\\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 \subsubsection{Evaluation of classification text}
@@ -209,7 +213,6 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 						        \\ \hline
 
 	\textbf{Relevance} 			& needed\\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 
@@ -229,24 +232,69 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	Both the evaluation and classification are defined in more detail in section \ref{subsec:Evaluation of classification}.
 	\\ \hline
 	\textbf{Relevance} 			& nice to have\\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
 	\end{tabular} \\
 
 
 
 
 
-\subsection{Analyze data}
+\subsubsection{Analyze data}
 \label{subsec:Analyze data}
 
 	\begin{tabular}{ | p{3cm} | p{12cm} |}
 	\hline
 	\textbf{Name} 				& Analyze data \\ \hline
 	\textbf{Feature id} 		& f8 \\ \hline
-	\textbf{Description} 		&  From the results of the comparison further values can be evaluated for a better understanding of the results. These values are described in more detail in section \ref{subsec:Analytical values}.
+	\textbf{Description} 		&  From the results of the comparison the values TP, TN, FP, FN are available. From this values further values can be evaluated for a better understanding of the results. These values are described in more detail in section \ref{subsec:Analytical values}.
 								    \\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
-	\textbf{Related stories} 	& tbd \\ \hline
+	\end{tabular} \\
+
+
+\subsubsection{Filter results}
+\label{subsec:Filter results}
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Filter results \\ \hline
+	\textbf{Feature id} 		& f9 \\ \hline
+	\textbf{Description} 		&  It needs to be possible to filter the test cases based on their results. It should be possible to filter them for following values:
+									\begin{itemize}
+									\item Precision
+									\item Recall
+									\item F-Measure
+									\item Fallout
+									\end{itemize}
+
+									To do so a line needs to be added to the configuration file. The line should be formatted like this:
+									\lstinputlisting{Code/filterExample.txt}
+									Now every test case where the precision value from JusText is lower than 0.8 is dropped.
+
+								    \\ \hline
+	\textbf{Relevance} 			& nice to have \\ \hline
+	\end{tabular} \\
+
+
+\subsubsection{Inspect single test case}
+\label{subsec:Inspect single test case}
+
+	\begin{tabular}{ | p{3cm} | p{12cm} |}
+	\hline
+	\textbf{Name} 				& Inspect single test case \\ \hline
+	\textbf{Feature id} 		& f10 \\ \hline
+	\textbf{Description} 		&  It needs to be possible inspect a single test case more closely.
+									To do so a line needs to be added to the configuration file. The line should be formatted like this:
+									\lstinputlisting{Code/inspectExample.txt}
+									Now the test case 'testOfInterest' is inspected more closely and an extra output file with the name 'result\_testOfInterest.txt' is generated.
+									This file should contain following information.
+									\begin{itemize}
+									\item Statistical values (TP, FP, TN, FN, Precision, Recall, etc.)
+									\item Actual content text
+									\item Results from all integrated algorithms
+									\item Results from all integrated formatted as blocks with the classification information for each block
+									\end{itemize}
+								    \\ \hline
+	\textbf{Relevance} 			& nice to have \\ \hline
 	\end{tabular} \\
 
 \subsection{Evaluation of classification}

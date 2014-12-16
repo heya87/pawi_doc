@@ -183,9 +183,9 @@
 
 \thesistitle{Evaluation of Different Content Extraction Algorithms} % Your thesis title - this is used in the title and abstract
 %-------------------------------------------------  
-\supervisor{Patrick Huber \linebreak Patrik Lengacher \linebreak Dr. M. Kaufmann} % You supervisor's name - this is used in the title page
+\supervisor{P. Huber \linebreak P. Lengacher \linebreak Dr. M. Kaufmann} % You supervisor's name - this is used in the title page
 %-------------------------------------------------   
-\examiner{Prof. M. Jud} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
+\examiner{Dr. M. Kaufmann \linebreak Prof. M. Jud} % Your examiner's name - this is not currently used anywhere in the template, cite it with \examname if you want it
 %-------------------------------------------------   
 \degree{Bachelor of Informatics} % Your degree name - this is currently used in the title page and abstract
 %-------------------------------------------------   
