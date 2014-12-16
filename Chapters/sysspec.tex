@@ -1,10 +1,10 @@
 % Chapter Template
 
-\chapter{Software Requirement Specification} % Main chapter title
+\chapter{Software Requirements Specification} % Main chapter title
 
 \label{Software Requirement Specification} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{ \emph{Software Requirement Specification}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{ \emph{Software Requirements Specification}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -23,23 +23,23 @@
 	1.0 	& 05.10.2014		& Grammar, layout 									& JR \\ \hline
 	1.1 	& 20.10.2014		& Fix FN definition									& JR \\ \hline
 	1.2 	& 23.11.2014		& Add new features filter, inspect test case		& JR \\ \hline
+	1.3 	& 16.12.2014		& Grammar 											& JR \\ \hline
 
 \end{tabular}
 
 \section{Introduction}
 
-\ref{Software Requirement Specification}
-
+TODO!
 
 \subsection{Purpose}
 
-The software requirement specification is providing all needed information to develop the context extraction framework and define all delivery objects. All interfaces to external components, input and output data, deployment considerations and quality attribute are well defined within this document.
+The software requirements specification provides all needed information to develop the context extraction test framework and define all delivery objects. All interfaces to external components, input and output data, deployment considerations and quality attributes are defined within this document.
 
 
 \subsection{Scope}
 
 
-The context extraction framework will perform automated text extraction on a set of HTML test data with two to three different text extraction algorithms. After measuring the performance of each algorithm, an output file with the measured results is generated.
+The context extraction test framework will perform automated text extraction on a set of HTML test data with two to three different text extraction algorithms. After measuring the performance of each algorithm, an output file with the measured results is generated.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -56,11 +56,11 @@ The operation environment for the text extraction framework is defined in this s
 \begin{tabular}{| p{3cm} | p{3cm} |}
 	\hline
 	Ubuntu & 12.04 \\ \hline
-	JDK & 1.7.X  \\ \hline
+	JDK & 1.7.x  \\ \hline
 	Gradle & 1.11 \\ \hline
-	Eclipse Keppler & 2.X \\ \hline
-	git & 1.9.X \\ \hline
-	python & 2.7.X \\ \hline
+	Eclipse Keppler & 2.x \\ \hline
+	git & 1.9.x \\ \hline
+	python & 2.7.x \\ \hline
 
 \end{tabular}
 
@@ -70,10 +70,10 @@ The operation environment for the text extraction framework is defined in this s
 \begin{tabular}{| p{3cm} | p{3cm} |}
 	\hline
 	Ubuntu & 12.04 \\ \hline
-	Open JDK & 1.6.X  \\ \hline
-	Open JDK & 1.7.X  \\ \hline
-	Oracle JDK & 1.7.X \\ \hline
-	Oracle JDK & 1.8.X  \\ \hline
+	Open JDK & 1.6.x  \\ \hline
+	Open JDK & 1.7.x  \\ \hline
+	Oracle JDK & 1.7.x \\ \hline
+	Oracle JDK & 1.8.x  \\ \hline
 	Gradle & 2.0 \\ \hline
 	Travis CI &  \\ \hline
 \end{tabular}
@@ -83,7 +83,7 @@ The operation environment for the text extraction framework is defined in this s
 \subsection{Design and Implementation Constraints}
 
 \subsubsection{User interface}
-As parts of the text extraction framework may be implemented in a server environment at a later point in time and a user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed.
+As parts of the text extraction framework may be implemented in a server environment at a later point in time and a graphical user interface is not desired from the client, there will be no graphical user interface. The application is built, deployed and started by gradle. While the application is running, no interaction is needed.
 
 
 \section{System Features}
@@ -180,7 +180,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\hline
 	\textbf{Name} 				& Integration Boilerpipe algorithm \\ \hline
 	\textbf{Feature id} 		& f4 \\ \hline
-	\textbf{Description} 		& Boilerplate is implemented in Java. An interfae is needed in order to call the Boilerplate component and get the extracted text or the extracted blocks.\\ \hline
+	\textbf{Description} 		& Boilerplate is implemented in Java. An interface is needed in order to call the Boilerplate component and get the extracted text or the extracted blocks.\\ \hline
 	\textbf{Relevance} 			& needed \\ \hline
 	\end{tabular} \\
 
@@ -206,7 +206,7 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if its content can be found in the actual content
 							        \item Categorize text as boilerplate or content
-							        \item Insert results in an output text file
+							        \item Write results to an output text file
 						        \end{itemize} 
 
 						        Both the evaluation and classification are defined in more detail in section \ref{subsec:Evaluation of classification}.
@@ -223,11 +223,11 @@ There are two folders defined by the configuration file (config.txt). The HTML f
 	\hline
 	\textbf{Name} 				& Evaluation of classification blocks \\ \hline
 	\textbf{Feature id} 		& f7 \\ \hline
-	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text but also each block of an HTML file is classified. So as to achieve the more detailed evaluation, the implementation of JusText and Boilerpiple has to be adapted so that they return classified blocks instead of the extracted text. These blocks are afterwards compared with the actual content and classified. 
+	\textbf{Description} 		& A more detailed evaluation of the algorithms could be done if not only the text but also each block of an HTML file is classified. So as to achieve the more detailed evaluation, the implementations of JusText and Boilerpiple have to be adapted so that they return classified blocks instead of the extracted text. These blocks are afterwards compared with the actual content and classified. 
 								\begin{itemize}
 							        \item Check each classified block from the algorithms if its content can be found in the content file
 							        \item Categorize all blocks as boilerplate or content
-							        \item Insert the results in an output text file (structure output file: tbd)
+							        \item Insert the results in an output text file
 						        \end{itemize} 
 	Both the evaluation and classification are defined in more detail in section \ref{subsec:Evaluation of classification}.
 	\\ \hline
@@ -398,6 +398,6 @@ The boilerpipe algorithm is implemented in Java and the documentation is found u
 
 \subsection{JusText}
 
-The JusText algorithm is implemented in python and the documentation is found under \url{https://code.google.com/p/justext/}. It is not yet defined how it will be integrated into the text extraction framework. See risk analysis for further information.
+The JusText algorithm is implemented in python and the documentation is found under \url{https://code.google.com/p/justext/}. See risk analysis for further information.
 
 
